@@ -9,19 +9,19 @@ $typography-scale: (
   "display-xl": (
     "desktop": (
       "font-size": 88px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.88px,
       "line-height": 1.02,
     ),
     "tablet": (
       "font-size": 88px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.88px,
       "line-height": 1.02,
     ),
     "mobile": (
       "font-size": 48px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.88px,
       "line-height": 1.02,
     ),
@@ -29,19 +29,19 @@ $typography-scale: (
   "display-lg": (
     "desktop": (
       "font-size": 64px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.51px,
       "line-height": 1.05,
     ),
     "tablet": (
-      "font-size": 48px,
-      "font-weight": 400,
+      "font-size": 64px,
+      "font-weight": 600,
       "letter-spacing": -0.51px,
       "line-height": 1.05,
     ),
     "mobile": (
-      "font-size": 36px,
-      "font-weight": 400,
+      "font-size": 48px,
+      "font-weight": 600,
       "letter-spacing": -0.51px,
       "line-height": 1.05,
     ),
@@ -49,19 +49,19 @@ $typography-scale: (
   "heading-section": (
     "desktop": (
       "font-size": 55px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.28px,
       "line-height": 1.1,
     ),
     "tablet": (
       "font-size": 44px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.28px,
       "line-height": 1.1,
     ),
     "mobile": (
       "font-size": 32px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.28px,
       "line-height": 1.1,
     ),
@@ -69,19 +69,19 @@ $typography-scale: (
   "heading-feature": (
     "desktop": (
       "font-size": 36px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.11px,
       "line-height": 1.15,
     ),
     "tablet": (
       "font-size": 30px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.11px,
       "line-height": 1.15,
     ),
     "mobile": (
       "font-size": 26px,
-      "font-weight": 400,
+      "font-weight": 600,
       "letter-spacing": -0.11px,
       "line-height": 1.15,
     ),
@@ -133,10 +133,24 @@ $typography-scale: (
     "line-height": 1.4,
   ),
   "body-lead": (
-    "font-size": 20px,
-    "font-weight": 400,
-    "letter-spacing": 0.21px,
-    "line-height": 1.5,
+    "desktop": (
+      "font-size": 20px,
+      "font-weight": 400,
+      "letter-spacing": 0.21px,
+      "line-height": 1.5,
+    ),
+    "tablet": (
+      "font-size": 20px,
+      "font-weight": 400,
+      "letter-spacing": 0.21px,
+      "line-height": 1.5,
+    ),
+    "mobile": (
+      "font-size": 16px,
+      "font-weight": 400,
+      "letter-spacing": 0.21px,
+      "line-height": 1.5,
+    ),
   ),
   "body": (
     "font-size": 16px,

@@ -50,7 +50,6 @@
   @include respond-below("tablet") {
     gap: space(2);
   }
-
 }
 
 .logoImage {
@@ -59,7 +58,6 @@
   transition: height 0.3s ease;
 
   @include respond-to("tablet") {
-
     // Tablet specific adjustment (between 768px and 1024px)
     @include respond-below("desktop") {
       height: 20px;

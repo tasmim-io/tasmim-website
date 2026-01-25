@@ -20,7 +20,7 @@
 .textWrapper {
   display: block;
   overflow: hidden;
-  height: 1em; // matches button-navbar line-height
+  height: 1em; // matches button line-height (all button typography styles have line-height: 1)
 
   span {
     display: block;
@@ -54,4 +54,21 @@
   &:hover {
     background-color: color("button-secondary-bg-hover");
   }
+}
+
+.outline {
+  background-color: color("background-dark-mode");
+  color: color("text-inverse");
+  border: 1px solid color("border-dark");
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+// Hero buttons - larger font size and better padding
+.heroCta,
+.heroButton {
+  @include typography("button-md");
+  padding: space(3) space(6);
 }

@@ -1,0 +1,188 @@
+@use "../../sass/index" as *;
+
+.card {
+  background-color: color("background-darker"); // Very dark background
+  border: 1px solid color("border-darker");
+  border-radius: radius("md"); // 4px
+  padding: space(6);
+  width: 300px;
+  box-shadow: shadow("xl");
+  display: flex;
+  flex-direction: column;
+  gap: space(4);
+
+  &.compact {
+    flex-direction: row;
+    align-items: center;
+    gap: space(4);
+    width: auto; // Or fixed width? User said "create these 2 cards", images imply similar width or responsive.
+    // Let's keep width 300px for consistency or auto.
+    // Images show them as wider than tall, but maybe same width as CRM card?
+    width: 300px;
+    padding: space(5); // Looks slightly less padded? Or same.
+  }
+
+  .header {
+    @include flex-between;
+    align-items: flex-start;
+
+    .iconWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: color("background-dark-soft"); // Slightly lighter than card bg
+      border-radius: radius("md");
+
+      &.purple {
+        color: color("accent-soft");
+      }
+      &.green {
+        color: color("feedback-success");
+        background-color: color("feedback-success-bg-dark");
+      }
+      &.blue {
+        color: color("accent-blue");
+        background-color: color("accent-blue-bg-dark");
+      }
+
+      // Default fallback if no class
+      color: color("accent-soft");
+    }
+
+    .badge {
+      @include typography("label-eyebrow");
+      color: color("text-tertiary");
+      border: 1px solid color("border-dark");
+      padding: 2px 6px;
+      border-radius: radius("sm");
+      font-size: 10px; // Override for small badge
+    }
+  }
+
+  // Wrapper for compact icon to reuse styles but position differently
+  .compactIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; // Slightly bigger in compact view? Or same?
+    // Images look like square icons. Let's use 40px to match.
+    width: 40px;
+    height: 40px;
+    background-color: color("background-dark-soft");
+    border-radius: radius("md");
+    flex-shrink: 0;
+
+    &.purple {
+      color: color("accent-soft");
+    }
+    &.green {
+      color: color("feedback-success");
+      background-color: color("feedback-success-bg-dark");
+    }
+    &.blue {
+      color: color("accent-blue");
+      background-color: color("accent-blue-bg-dark");
+    }
+  }
+
+  .bodyWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: space(2);
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: space(1);
+
+      .label {
+        @include typography("body");
+        color: color("text-inverse");
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .statRow {
+        display: flex;
+        align-items: flex-end;
+        gap: space(2);
+
+        .value {
+          @include typography("heading-section"); // Large number
+          font-size: 14px;
+          font-weight: 700;
+          color: color("text-inverse");
+          line-height: 1;
+        }
+
+        .change {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          @include typography("body-small");
+          color: color("text-tertiary");
+          font-size: 11px;
+
+          .triangle {
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 6px solid color("text-tertiary");
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      gap: space(2);
+
+      .progressBar {
+        width: 100%;
+        height: 4px;
+        background-color: color("border-dark");
+        border-radius: radius("pill");
+        overflow: hidden;
+
+        .progressFill {
+          width: 65%; // Visual approximation
+          height: 100%;
+          background-color: color("accent-primary");
+          border-radius: radius("pill");
+        }
+      }
+
+      .source {
+        @include typography("body-caption");
+        color: color("text-secondary");
+      }
+    }
+  }
+
+  // Compact Layout Text Column
+  .textColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .compactTitle {
+      @include typography("body-small"); // Check size
+      font-size: 14px;
+      font-weight: 600;
+      color: color("text-inverse");
+      line-height: 1.2;
+    }
+
+    .compactSubtitle {
+      @include typography("body-caption");
+      font-size: 12px;
+      color: color("text-secondary");
+    }
+  }
+}

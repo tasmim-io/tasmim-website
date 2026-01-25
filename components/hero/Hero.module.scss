@@ -1,0 +1,149 @@
+@use "../../sass/index" as *;
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: space(16);
+
+  @include respond-below("tablet") {
+    padding-top: space(8);
+  }
+
+  @include respond-below("mobile") {
+    padding-top: space(5);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include responsive-typography("display-lg");
+  color: color("text-inverse");
+  margin-bottom: space(5);
+  @include respond-below("tablet") {
+    margin-bottom: space(4);
+  }
+}
+
+.description {
+  @include responsive-typography("body-lead");
+  color: color("text-tertiary");
+  max-width: 480px;
+  margin-bottom: space(8);
+  @include respond-below("tablet") {
+    margin-bottom: space(6);
+  }
+  @include respond-below("mobile") {
+    margin-bottom: space(5);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: space(3);
+}
+
+.visualsWrapper{
+  margin-top:-5%;
+  margin-left: 25%;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(24,1fr);
+  gap: space(4);
+  position: relative;
+
+  @include respond-below("desktop") {
+    margin-left: 15%;
+    margin-top: 0;
+    gap: space(3);
+  }
+
+  @include respond-below("tablet") {
+    margin-left: 10%;
+    margin-top: space(6);
+    transform-origin: top left;
+  }
+
+  @include respond-below("mobile") {
+    // margin-left: 5%;
+    margin-top: space(10);
+  }
+}
+
+.heroDashboard {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  filter:blur(2px);
+  border: 1px solid color("border-dark");
+}
+
+//leads card
+.card1 {
+  position: absolute;
+  grid-column: 1 / 4;
+  grid-row: 5 / 8;
+  z-index: 2;
+  transform: scale(0.8);
+  transform-origin: left center;
+
+  @include respond-below("desktop") {
+    transform: scale(0.75);
+  }
+
+  @include respond-below("mobile") {
+    grid-row: 9/24;
+
+  }
+}
+
+
+//sync compelete card
+.card2 {
+  position: absolute;
+  grid-column: 8 / 13;
+  grid-row: 1 / 4;
+  z-index: 2;
+  transform: scale(0.8);
+  transform-origin: right top;
+
+  @include respond-below("desktop") {
+    width: 260px !important;
+  grid-column: 7 / 13;
+  }
+
+  @include respond-below("tablet") {
+    width: 220px !important;
+  }
+
+  @include respond-below("mobile") {
+    grid-column: 6 / 13;
+  }
+}
+
+//time saved card
+.card3 {
+  position: absolute;
+  grid-column: 1 / 8;
+  grid-row: 16 / 24;
+  z-index: 2;
+  transform: scale(0.8);
+  transform-origin: center bottom;
+
+  @include respond-below("desktop") {
+    width: 260px !important;
+    grid-row: 14/24;
+  }
+
+  @include respond-below("tablet") {
+    width: 220px !important;
+  }
+
+  @include respond-below("mobile") {
+    display: none;
+  }
+}
