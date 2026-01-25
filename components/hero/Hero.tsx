@@ -33,37 +33,36 @@ export const Hero = () => {
             View Services
           </Button>
         </div>
-        </div>
-        <div className={styles.visualsWrapper}>
-          <HeroDashboard />
-          <StatCard
-            variant="default"
-            icon={Users}
-            label="Qualified Leads"
-            value="18"
-            subLabel="4"
-            badge="CRM"
-            color="purple"
-            className={styles.card1}
-          />
-          <StatCard
-            variant="compact"
-            icon={Check}
-            label="Sync Complete"
-            subLabel="454 records updated"
-            color="green"
-            className={styles.card2}
-          />
-          <StatCard
-            variant="compact"
-            icon={Clock}
-            label="Time Saved"
-            subLabel="12.5 hrs this week"
-            color="blue"
-            className={styles.card3}
-          />
-        </div>
-      
+      </div>
+      <div className={styles.visualsWrapper}>
+        <HeroDashboard />
+        <StatCard
+          variant="default"
+          icon={Users}
+          label="Qualified Leads"
+          value="18"
+          subLabel="4"
+          badge="CRM"
+          color="purple"
+          className={styles.card1}
+        />
+        <StatCard
+          variant="compact"
+          icon={Check}
+          label="Sync Complete"
+          subLabel="454 records updated"
+          color="green"
+          className={styles.card2}
+        />
+        <StatCard
+          variant="compact"
+          icon={Clock}
+          label="Time Saved"
+          subLabel="12.5 hrs this week"
+          color="blue"
+          className={styles.card3}
+        />
+      </div>
     </section>
   );
 };

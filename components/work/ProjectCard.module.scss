@@ -1,0 +1,122 @@
+@use "../../sass/index" as *;
+
+.projectCard {
+  display: flex;
+  gap: space(10);
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-below("tablet") {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: space(6);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 60%;
+  height: 50vh;
+  border: 1px solid color("border-dark");
+  border-radius: radius("md");
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include respond-below("desktop") {
+    width: 50%;
+    // height: 45vh;
+  }
+
+  @include respond-below("tablet") {
+    width: 100%;
+    height: 40vh;
+  }
+
+  @include respond-below("mobile") {
+    height: 33vh;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+
+  @include respond-below("tablet") {
+    width: 100%;
+    justify-content: flex-start;
+    gap: space(6);
+    height: fit-content;
+  }
+}
+
+.contentInner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: space(4);
+}
+
+.label {
+  @include typography("label-eyebrow");
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color("text-tertiary");
+  padding: 4px 12px;
+  background: #131313;
+  border: 1px solid color("border-darker");
+  border-radius: radius("sm");
+  width: fit-content;
+}
+
+.title {
+  @include responsive-typography("heading-feature");
+  color: color("text-inverse");
+}
+
+.description {
+  @include typography("body");
+  color: color("text-tertiary");
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technologies {
+  @include typography("label");
+  color: color("text-tertiary");
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: space(2);
+}
+
+.dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: color("text-tertiary");
+  border-radius: 50%;
+}
+
+.year {
+  @include typography("label");
+  color: color("text-tertiary");
+}
+
+.reversed {
+  flex-direction: row-reverse;
+
+  @include respond-below("tablet") {
+    flex-direction: column;
+  }
+}

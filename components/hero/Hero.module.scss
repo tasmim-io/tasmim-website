@@ -48,12 +48,12 @@
   gap: space(3);
 }
 
-.visualsWrapper{
-  margin-top:-5%;
+.visualsWrapper {
+  margin-top: -5%;
   margin-left: 25%;
   display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-template-rows: repeat(24,1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(24, 1fr);
   gap: space(4);
   position: relative;
 
@@ -78,7 +78,7 @@
 .heroDashboard {
   grid-column: 2 / -1;
   grid-row: 2 / -1;
-  filter:blur(2px);
+  filter: blur(2px);
   border: 1px solid color("border-dark");
 }
 
@@ -97,10 +97,8 @@
 
   @include respond-below("mobile") {
     grid-row: 9/24;
-
   }
 }
-
 
 //sync compelete card
 .card2 {
@@ -113,7 +111,7 @@
 
   @include respond-below("desktop") {
     width: 260px !important;
-  grid-column: 7 / 13;
+    grid-column: 7 / 13;
   }
 
   @include respond-below("tablet") {

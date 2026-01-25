@@ -30,7 +30,6 @@
   padding: space(4) space(4);
   position: relative;
   z-index: 1001; // Above mobile menu
-
   @include respond-to("tablet") {
     padding: space(4) space(6);
   }

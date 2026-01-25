@@ -1,0 +1,29 @@
+@use "../../sass/index" as *;
+
+.work {
+  padding-top: space(20);
+  padding-bottom: space(20);
+}
+
+.heading {
+  @include responsive-typography("heading-section");
+  margin-bottom: space(16);
+  @include respond-below("tablet") {
+    margin-bottom: space(10);
+  }
+  @include respond-below("mobile") {
+    margin-bottom: space(8);
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: space(30);
+  @include respond-below("tablet") {
+    gap: space(24);
+  }
+  @include respond-below("mobile") {
+    gap: space(20);
+  }
+}
