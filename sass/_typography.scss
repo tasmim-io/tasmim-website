@@ -60,7 +60,7 @@ $typography-scale: (
       "line-height": 1.1,
     ),
     "mobile": (
-      "font-size": 32px,
+      "font-size": 36px,
       "font-weight": 600,
       "letter-spacing": -0.28px,
       "line-height": 1.1,
@@ -98,7 +98,7 @@ $typography-scale: (
       "line-height": 1.2,
     ),
     "mobile": (
-      "font-size": 22px,
+      "font-size": 24px,
       "font-weight": 400,
       "line-height": 1.2,
     ),
@@ -228,6 +228,40 @@ $typography-scale: (
     "font-size": 13px,
     "font-weight": 500,
     "line-height": 1,
+  ),
+  "list-item-title": (
+    "desktop": (
+      "font-size": 18px,
+      "font-weight": 600,
+      "line-height": 1.4,
+    ),
+    "tablet": (
+      "font-size": 16px,
+      "font-weight": 600,
+      "line-height": 1.4,
+    ),
+    "mobile": (
+      "font-size": 16px,
+      "font-weight": 600,
+      "line-height": 1.4,
+    ),
+  ),
+  "list-item-description": (
+    "desktop": (
+      "font-size": 16px,
+      "font-weight": 400,
+      "line-height": 1.5,
+    ),
+    "tablet": (
+      "font-size": 16px,
+      "font-weight": 400,
+      "line-height": 1.5,
+    ),
+    "mobile": (
+      "font-size": 16px,
+      "font-weight": 400,
+      "line-height": 1.5,
+    ),
   ),
 );
 

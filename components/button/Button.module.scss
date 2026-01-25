@@ -66,9 +66,8 @@
   }
 }
 
-// Hero buttons - larger font size and better padding
-.heroCta,
-.heroButton {
+// Large size variant
+.lg {
   @include typography("button-md");
   padding: space(3) space(6);
 }

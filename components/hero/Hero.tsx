@@ -5,7 +5,6 @@ import { StatCard } from "../stat-card/StatCard";
 import { BOOK_A_CALL_HREF } from "../../lib/links";
 import { Users, Check, Clock } from "lucide-react";
 import styles from "./Hero.module.scss";
-import buttonStyles from "../button/Button.module.scss";
 import HeroDashboard from "./HeroDashboard";
 
 export const Hero = () => {
@@ -21,15 +20,10 @@ export const Hero = () => {
           For agencies and experts who value calm operations as much as strong first impressions.
         </p>
         <div className={styles.buttonGroup}>
-          <Button
-            href={BOOK_A_CALL_HREF}
-            external
-            variant="secondary"
-            className={buttonStyles.heroCta}
-          >
+          <Button href={BOOK_A_CALL_HREF} external variant="secondary" size="lg">
             Book a call
           </Button>
-          <Button href="#services" variant="outline" className={buttonStyles.heroButton}>
+          <Button href="#services" variant="outline" size="lg">
             View Services
           </Button>
         </div>

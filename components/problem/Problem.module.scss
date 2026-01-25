@@ -1,0 +1,159 @@
+@use "../../sass/index" as *;
+
+.section {
+  width: 100%;
+}
+
+.heading {
+  @include responsive-typography("heading-section");
+  color: color("text-inverse");
+  max-width: 580px;
+  margin-bottom: space(16);
+
+  @include respond-below("tablet") {
+    margin-bottom: space(10);
+  }
+
+  @include respond-below("mobile") {
+    margin-bottom: space(8);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: space(6);
+
+  @include respond-to("tablet") {
+    grid-template-columns: 1fr 1fr;
+    gap: space(6);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: space(8);
+  border-radius: radius("lg");
+  height: 100%;
+
+  @include respond-to("tablet") {
+    padding: space(10);
+  }
+
+  @include respond-to("desktop") {
+    padding: space(12);
+  }
+}
+
+.cardHeader {
+  margin-bottom: space(6);
+
+  @include respond-to("tablet") {
+    margin-bottom: space(8);
+  }
+
+  h3 {
+    @include responsive-typography("heading-block");
+    font-weight: 600;
+    color: color("text-inverse");
+    margin-bottom: space(1);
+  }
+
+  p {
+    @include typography("body");
+    color: color("text-tertiary");
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: space(6);
+
+  @include respond-to("tablet") {
+    gap: space(8);
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: space(3);
+
+  @include respond-to("tablet") {
+    gap: space(4);
+  }
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.itemContent {
+  max-width: 440px;
+
+  @include respond-below("tablet") {
+    max-width: 100%;
+  }
+
+  h4 {
+    @include responsive-typography("list-item-title");
+    color: color("text-inverse");
+    margin-bottom: space(1);
+  }
+
+  p {
+    @include responsive-typography("list-item-description");
+    color: color("text-quaternary");
+  }
+}
+
+// Specific styles for Growth Ceiling (Left)
+.growthCard {
+  border: 1px solid color("border-darker");
+  background: transparent;
+
+  .iconWrapper {
+    color: color("feedback-error");
+  }
+}
+
+// Specific styles for Scalable Agency (Right)
+.scalableCard {
+  background-color: #151422;
+  border: 1px solid color("accent-deep");
+
+  .iconWrapper {
+    color: color("accent-soft");
+  }
+
+  .itemContent p {
+    color: color("text-tertiary");
+  }
+}
+
+.ctaContainer {
+  margin-top: space(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: space(6);
+
+  @include respond-below("tablet") {
+    margin-top: space(8);
+  }
+
+  p {
+    @include typography("body-large");
+    color: color("text-inverse");
+    max-width: 600px;
+  }
+}

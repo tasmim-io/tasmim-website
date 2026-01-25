@@ -6,6 +6,7 @@ interface ButtonProps {
   children: ReactNode;
   href: string;
   variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "lg";
   external?: boolean;
   onClick?: () => void;
   className?: string;
@@ -15,16 +16,18 @@ export const Button = ({
   children,
   href,
   variant = "primary",
+  size = "sm",
   external = false,
   onClick,
   className = "",
 }: ButtonProps) => {
   const text = typeof children === "string" ? children : "";
+  const sizeClass = size === "lg" ? styles.lg : "";
 
   return (
     <Link
       href={href}
-      className={`${styles.button} ${styles[variant]} ${className}`}
+      className={`${styles.button} ${styles[variant]} ${sizeClass} ${className}`.trim()}
       onClick={onClick}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}

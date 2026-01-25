@@ -1,0 +1,59 @@
+{
+  "heading": "Your expertise outgrew your infrastructure",
+  "cards": {
+    "growthCeiling": {
+      "title": "The Growth Ceiling",
+      "subtitle": "Growing pains and manual work",
+      "icon": "AlertCircle",
+      "items": [
+        {
+          "title": "Your website hides your expertise",
+          "description": "Your website doesn't reflect your current caliber. Prospects judge you on an old version of your work, creating doubt before you even speak."
+        },
+        {
+          "title": "The manual work trap",
+          "description": "You're stuck copying data between platforms and building the same reports. Every new client adds more admin work instead of more profit."
+        },
+        {
+          "title": "Breaking under pressure",
+          "description": "Your setup was built for five clients, not twenty. Now, things are breaking and you're \"duct-taping\" tools together just to keep up."
+        },
+        {
+          "title": "Managing tools, not strategy",
+          "description": "You're constantly switching between client work and small tasks. You're spending your energy on spreadsheets instead of your craft."
+        }
+      ]
+    },
+    "scalableAgency": {
+      "title": "The Scalable Agency",
+      "subtitle": "More freedom and better flow",
+      "icon": "CheckCircle2",
+      "items": [
+        {
+          "title": "A website that opens doors",
+          "description": "Your digital presence does the heavy lifting. Prospects arrive pre-impressed, so first calls start with \"I love your work,\" not \"What do you do?\""
+        },
+        {
+          "title": "Systems that run themselves",
+          "description": "Leads flow into your CRM automatically and reports generate themselves. You finally get your Tuesday mornings back."
+        },
+        {
+          "title": "Built to get bigger",
+          "description": "Your business grows without the stress. Your systems stay organized and strong, no matter how many clients you take on."
+        },
+        {
+          "title": "Focus on the big picture",
+          "description": "Strategy over spreadsheets. You get back to high-level work and leading your business while the tools handle the rest."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "text": "We align your digital presence with your daily operations, so your business works as well as it looks.",
+    "button": {
+      "text": "Book a call",
+      "href": "/contact",
+      "variant": "secondary"
+    }
+  }
+}
