@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# next build output
+.next
+out
+build
+
+# misc
+coverage
+
+# lockfiles (avoid large diffs)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+

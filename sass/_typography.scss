@@ -1,0 +1,399 @@
+@use "sass:map";
+@use "sass:meta";
+
+// Sass Typography Variables
+$font-family: "Inter Tight", sans-serif;
+
+// Typography Scale Maps
+$typography-scale: (
+  "display-xl": (
+    "desktop": (
+      "font-size": 88px,
+      "font-weight": 400,
+      "letter-spacing": -0.88px,
+      "line-height": 1.02,
+    ),
+    "tablet": (
+      "font-size": 88px,
+      "font-weight": 400,
+      "letter-spacing": -0.88px,
+      "line-height": 1.02,
+    ),
+    "mobile": (
+      "font-size": 48px,
+      "font-weight": 400,
+      "letter-spacing": -0.88px,
+      "line-height": 1.02,
+    ),
+  ),
+  "display-lg": (
+    "desktop": (
+      "font-size": 64px,
+      "font-weight": 400,
+      "letter-spacing": -0.51px,
+      "line-height": 1.05,
+    ),
+    "tablet": (
+      "font-size": 48px,
+      "font-weight": 400,
+      "letter-spacing": -0.51px,
+      "line-height": 1.05,
+    ),
+    "mobile": (
+      "font-size": 36px,
+      "font-weight": 400,
+      "letter-spacing": -0.51px,
+      "line-height": 1.05,
+    ),
+  ),
+  "heading-section": (
+    "desktop": (
+      "font-size": 55px,
+      "font-weight": 400,
+      "letter-spacing": -0.28px,
+      "line-height": 1.1,
+    ),
+    "tablet": (
+      "font-size": 44px,
+      "font-weight": 400,
+      "letter-spacing": -0.28px,
+      "line-height": 1.1,
+    ),
+    "mobile": (
+      "font-size": 32px,
+      "font-weight": 400,
+      "letter-spacing": -0.28px,
+      "line-height": 1.1,
+    ),
+  ),
+  "heading-feature": (
+    "desktop": (
+      "font-size": 36px,
+      "font-weight": 400,
+      "letter-spacing": -0.11px,
+      "line-height": 1.15,
+    ),
+    "tablet": (
+      "font-size": 30px,
+      "font-weight": 400,
+      "letter-spacing": -0.11px,
+      "line-height": 1.15,
+    ),
+    "mobile": (
+      "font-size": 26px,
+      "font-weight": 400,
+      "letter-spacing": -0.11px,
+      "line-height": 1.15,
+    ),
+  ),
+  "heading-block": (
+    "desktop": (
+      "font-size": 28px,
+      "font-weight": 400,
+      "line-height": 1.2,
+    ),
+    "tablet": (
+      "font-size": 24px,
+      "font-weight": 400,
+      "line-height": 1.2,
+    ),
+    "mobile": (
+      "font-size": 22px,
+      "font-weight": 400,
+      "line-height": 1.2,
+    ),
+  ),
+  "heading-card": (
+    "desktop": (
+      "font-size": 22px,
+      "font-weight": 400,
+      "line-height": 1.25,
+    ),
+    "tablet": (
+      "font-size": 20px,
+      "font-weight": 400,
+      "line-height": 1.25,
+    ),
+    "mobile": (
+      "font-size": 18px,
+      "font-weight": 400,
+      "line-height": 1.25,
+    ),
+  ),
+  "body-subtitle": (
+    "font-size": 28px,
+    "font-weight": 400,
+    "letter-spacing": 0.21px,
+    "line-height": 1.3,
+  ),
+  "body-large": (
+    "font-size": 24px,
+    "font-weight": 400,
+    "letter-spacing": 0.21px,
+    "line-height": 1.4,
+  ),
+  "body-lead": (
+    "font-size": 20px,
+    "font-weight": 400,
+    "letter-spacing": 0.21px,
+    "line-height": 1.5,
+  ),
+  "body": (
+    "font-size": 16px,
+    "font-weight": 500,
+    "letter-spacing": 0.17px,
+    "line-height": 1.6,
+  ),
+  "body-small": (
+    "font-size": 14px,
+    "font-weight": 500,
+    "letter-spacing": 0.14px,
+    "line-height": 1.5,
+  ),
+  "body-caption": (
+    "font-size": 12px,
+    "font-weight": 500,
+    "letter-spacing": 0.12px,
+    "line-height": 1.4,
+  ),
+  "label-eyebrow": (
+    "font-size": 12px,
+    "font-weight": 400,
+    "letter-spacing": 1.2px,
+    "line-height": 1.4,
+    "text-decoration": uppercase,
+  ),
+  "label": (
+    "font-size": 14px,
+    "font-weight": 500,
+    "letter-spacing": 0.56px,
+    "line-height": 1.4,
+  ),
+  "button-sm": (
+    "font-size": 14px,
+    "font-weight": 600,
+    "line-height": 1,
+  ),
+  "button-md": (
+    "font-size": 16px,
+    "font-weight": 600,
+    "line-height": 1,
+  ),
+  "button-lg": (
+    "font-size": 18px,
+    "font-weight": 600,
+    "line-height": 1,
+  ),
+  "button-xs": (
+    "font-size": 12px,
+    "font-weight": 600,
+    "line-height": 1,
+  ),
+  "link-sm": (
+    "font-size": 16px,
+    "font-weight": 500,
+    "line-height": 1.4,
+  ),
+  "link-md": (
+    "font-size": 18px,
+    "font-weight": 500,
+    "line-height": 1.4,
+  ),
+  "link-lg": (
+    "font-size": 20px,
+    "font-weight": 500,
+    "line-height": 1.4,
+  ),
+  "logo-text": (
+    "font-size": 20px,
+    "font-weight": 600,
+    "letter-spacing": 0.05em,
+    "line-height": 1,
+  ),
+  "button-navbar": (
+    "font-size": 13px,
+    "font-weight": 500,
+    "line-height": 1,
+  ),
+);
+
+// Helper function to get typography value
+@function typography($style, $breakpoint: null, $property: null) {
+  $style-map: map.get($typography-scale, $style);
+
+  @if not $style-map {
+    @error "Typography style '#{$style}' not found in $typography-scale.";
+  }
+
+  @if $breakpoint {
+    @if meta.type-of($style-map) != "map" {
+      @error "Typography style '#{$style}' is not a map, cannot get breakpoint '#{$breakpoint}'.";
+    }
+
+    // Check if the breakpoint exists in the map
+    @if not map.has-key($style-map, $breakpoint) {
+      // Fallback or error - for now, if mobile requested but not found, try to return base style if it's flat,
+      // or error if we strictly expect breakpoints.
+      // Based on usage, we should probably check existence.
+      @if map.has-key($style-map, "desktop") or map.has-key($style-map, "mobile") {
+        // It is a responsive map, but missing this specific breakpoint
+        @error "Breakpoint '#{$breakpoint}' not found for typography style '#{$style}'.";
+      } @else {
+        // It's a flat map (no breakpoints), just return it?
+        // But the mixin requested a breakpoint.
+        // Let's assume the user knows what they are doing and error if missing.
+        @error "Breakpoint '#{$breakpoint}' not found for typography style '#{$style}' (style appears to be non-responsive).";
+      }
+    }
+
+    $breakpoint-map: map.get($style-map, $breakpoint);
+
+    @if $property {
+      @return map.get($breakpoint-map, $property);
+    }
+
+    @return $breakpoint-map;
+  }
+
+  @if $property {
+    @return map.get($style-map, $property);
+  }
+
+  @return $style-map;
+}
+
+// Typography Mixin
+@mixin typography($style, $breakpoint: null) {
+  font-family: $font-family;
+
+  @if $breakpoint {
+    // Check if the style exists and has the requested breakpoint
+    $style-map: map.get($typography-scale, $style);
+
+    @if $style-map {
+      @if map.has-key($style-map, $breakpoint) {
+        $props: typography($style, $breakpoint);
+
+        @each $prop, $value in $props {
+          @if $prop == "font-size" {
+            font-size: $value;
+          } @else if $prop == "font-weight" {
+            font-weight: $value;
+          } @else if $prop == "letter-spacing" {
+            letter-spacing: $value;
+          } @else if $prop == "line-height" {
+            line-height: $value;
+          } @else if $prop == "text-decoration" {
+            text-decoration: $value;
+          }
+        }
+      } @else {
+        // Fallback: If the requested breakpoint doesn't exist, try to use the base style
+        // This handles cases where a style might be flat (like 'body-small') but requested with 'mobile'
+        // or if we just want to apply the style regardless.
+        // However, strictly following the mixin logic:
+        $props: typography($style);
+
+        @each $prop, $value in $props {
+          @if $prop == "font-size" {
+            font-size: $value;
+          } @else if $prop == "font-weight" {
+            font-weight: $value;
+          } @else if $prop == "letter-spacing" {
+            letter-spacing: $value;
+          } @else if $prop == "line-height" {
+            line-height: $value;
+          } @else if $prop == "text-decoration" {
+            text-decoration: $value;
+          }
+        }
+      }
+    }
+  } @else {
+    $props: typography($style);
+
+    @each $prop, $value in $props {
+      @if $prop == "font-size" {
+        font-size: $value;
+      } @else if $prop == "font-weight" {
+        font-weight: $value;
+      } @else if $prop == "letter-spacing" {
+        letter-spacing: $value;
+      } @else if $prop == "line-height" {
+        line-height: $value;
+      } @else if $prop == "text-decoration" {
+        text-decoration: $value;
+      }
+    }
+  }
+}
+
+// Responsive Typography Mixin
+@mixin responsive-typography($style) {
+  $style-map: map.get($typography-scale, $style);
+
+  // Mobile first
+  @if map.has-key($style-map, "mobile") {
+    @include typography($style, "mobile");
+  } @else {
+    @include typography($style);
+  }
+
+  // Tablet
+  @if map.has-key($style-map, "tablet") {
+    @media (min-width: 768px) {
+      @include typography($style, "tablet");
+    }
+  }
+
+  // Desktop
+  @if map.has-key($style-map, "desktop") {
+    @media (min-width: 1024px) {
+      @include typography($style, "desktop");
+    }
+  }
+}
+
+// Export CSS custom properties from Sass variables
+:root {
+  --font-family: #{$font-family};
+
+  @each $style, $style-map in $typography-scale {
+    @if meta.type-of($style-map) == "map" {
+      @if map.has-key($style-map, "desktop") {
+        $desktop: map.get($style-map, "desktop");
+
+        @each $prop, $value in $desktop {
+          --#{$style}-desktop-#{$prop}: #{$value};
+        }
+      }
+
+      @if map.has-key($style-map, "tablet") {
+        $tablet: map.get($style-map, "tablet");
+
+        @each $prop, $value in $tablet {
+          --#{$style}-tablet-#{$prop}: #{$value};
+        }
+      }
+
+      @if map.has-key($style-map, "mobile") {
+        $mobile: map.get($style-map, "mobile");
+
+        @each $prop, $value in $mobile {
+          --#{$style}-mobile-#{$prop}: #{$value};
+        }
+      }
+
+      // For styles without breakpoints
+      @if not
+        map.has-key($style-map, "desktop") and not
+        map.has-key($style-map, "tablet") and not
+        map.has-key($style-map, "mobile")
+      {
+        @each $prop, $value in $style-map {
+          --#{$style}-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+}

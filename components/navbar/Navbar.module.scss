@@ -1,0 +1,188 @@
+@use "../../sass/index" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(5, 5, 5, 0.85);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid transparent;
+  border-bottom-color: color("border-darker");
+  transition: all 0.3s ease;
+
+  // On small screens, prevent the animated width from overflowing
+  @include respond-below("tablet") {
+    max-width: 100% !important;
+    width: 100% !important;
+    top: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+.container {
+  @include flex-between;
+  max-width: container("max-width");
+  margin: 0 auto;
+  padding: space(4) space(4);
+  position: relative;
+  z-index: 1001; // Above mobile menu
+
+  @include respond-to("tablet") {
+    padding: space(4) space(6);
+  }
+
+  @include respond-to("desktop") {
+    padding: space(4) space(8);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: space(3);
+  text-decoration: none;
+  z-index: 1002;
+
+  @include respond-below("tablet") {
+    gap: space(2);
+  }
+
+}
+
+.logoImage {
+  height: 24px;
+  width: auto;
+  transition: height 0.3s ease;
+
+  @include respond-to("tablet") {
+
+    // Tablet specific adjustment (between 768px and 1024px)
+    @include respond-below("desktop") {
+      height: 20px;
+    }
+  }
+
+  @include respond-below("tablet") {
+    height: 16px;
+  }
+}
+
+.logoText {
+  @include typography("logo-text");
+  color: color("text-inverse");
+  overflow: hidden;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+
+  @include respond-below("tablet") {
+    font-size: 18px;
+  }
+
+  @include respond-below("mobile") {
+    font-size: 16px;
+  }
+}
+
+// Wrapper for the desktop navigation
+.desktopNavWrapper {
+  display: none;
+
+  @include respond-to("tablet") {
+    display: block;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: space(2);
+}
+
+.navLink {
+  @include typography("body-small");
+  color: color("text-tertiary");
+  text-decoration: none;
+  padding: space(2) space(3);
+  border-radius: radius("sm");
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: color("text-inverse");
+  }
+}
+
+.linkText {
+  display: block;
+  overflow: hidden;
+  height: 1.5em; // matches body-small line-height
+
+  span {
+    display: block;
+    transition: transition("text-slide");
+
+    &::after {
+      content: attr(data-text);
+      display: block;
+    }
+  }
+
+  .navLink:hover & span {
+    transform: translateY(-50%);
+  }
+}
+
+.cta {
+  margin-left: space(2);
+}
+
+// Hamburger Menu Toggle
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+
+  span {
+    width: 20px;
+    height: 2px;
+    background: color("text-inverse");
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @include respond-to("tablet") {
+    display: none;
+  }
+}

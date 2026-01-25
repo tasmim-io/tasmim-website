@@ -1,0 +1,57 @@
+@use "../../sass/index" as *;
+
+.button {
+  @include typography("button-navbar");
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: space(2) space(4);
+  border-radius: radius("sm");
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.textWrapper {
+  display: block;
+  overflow: hidden;
+  height: 1em; // matches button-navbar line-height
+
+  span {
+    display: block;
+    transition: transition("text-slide");
+
+    &::after {
+      content: attr(data-text);
+      display: block;
+    }
+  }
+
+  .button:hover & span {
+    transform: translateY(-50%);
+  }
+}
+
+.primary {
+  background-color: color("button-primary-bg");
+  color: color("button-text");
+
+  &:hover {
+    background-color: color("button-primary-bg-hover");
+  }
+}
+
+.secondary {
+  background-color: color("button-secondary-bg");
+  color: color("button-secondary-text");
+  border: 1px solid color("button-secondary-border");
+
+  &:hover {
+    background-color: color("button-secondary-bg-hover");
+  }
+}

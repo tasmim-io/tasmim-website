@@ -1,0 +1,22 @@
+@use "sass:map";
+
+// Sass Radius Variables
+$radius: (
+  "none": 0,
+  "sm": 2px,
+  "md": 4px,
+  "lg": 6px,
+  "pill": 999px,
+);
+
+// Helper function to get radius
+@function radius($name) {
+  @return map.get($radius, $name);
+}
+
+// Export CSS custom properties from Sass variables
+:root {
+  @each $name, $value in $radius {
+    --radius-#{$name}: #{$value};
+  }
+}

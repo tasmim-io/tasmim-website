@@ -1,0 +1,115 @@
+@use "sass:map";
+
+// Sass Color Variables
+$colors: (
+  // Background Colors
+  "background-page": #f9f9f9,
+  "background-surface": #efefef,
+  "background-muted": #e7e7e7,
+  "background-elevated": #ffffff,
+  "background-dark": #161616,
+  "background-dark-soft": #2c2c2c,
+  "background-darker": #0a0a0a,
+  "background-dark-mode": #050505,
+
+  // Text Colors
+  "text-primary": #161616,
+  "text-secondary": #747474,
+  "text-tertiary": #a5a5a5,
+  "text-quaternary": #b9b9b9,
+  "text-inverse": #f9f9f9,
+  "text-inverse-muted": #a5a5a5,
+
+  // Border Colors
+  "border-subtle": #d7d7d7,
+  "border-default": #bebebe,
+  "border-strong": #747474,
+  "border-dark": #424242,
+  "border-darker": #2a2a2a,
+  "border-darkest": #1d1e1e,
+  "divider": #e8e8e8,
+
+  // Accent Colors
+  "accent-primary": #5141a6,
+  "accent-strong": #3f3485,
+  "accent-soft": #7a6bf2,
+  "accent-light": #9689ff,
+  "accent-deep": #332a6b,
+  "accent-bg-soft": #f3f1ff,
+  "accent-bg": rgba(81, 65, 166, 0.05),
+  // Button Colors
+  "button-primary-bg": #161616,
+  "button-primary-bg-hover": #2c2c2c,
+  "button-text": #f9f9f9,
+  "button-secondary-bg": #f9f9f9,
+  "button-secondary-bg-hover": #e7e7e7,
+  "button-secondary-border": #d7d7d7,
+  "button-secondary-text": #161616,
+  "button-link": #161616,
+  "button-link-hover": #2c2c2c,
+
+  // Feedback Colors
+  "feedback-success": #1d7a52,
+  "feedback-success-bg": #e5f4ee,
+  "feedback-warning": #946200,
+  "feedback-warning-bg": #fff6e0,
+  "feedback-error": #b73a3a,
+  "feedback-error-bg": #fdebec
+);
+
+// Shadow Variables
+$shadows: (
+  "sm": 0px 1px 2px rgba(20, 20, 20, 0.05),
+  "md": 0px 2px 4px rgba(20, 20, 20, 0.08),
+  "lg": 0px 4px 8px rgba(20, 20, 20, 0.12),
+  "xl": 0px 8px 16px rgba(20, 20, 20, 0.15),
+);
+
+// Container Variables
+$containers: (
+  "max-width": 1200px,
+);
+
+// Transition Variables
+$transitions: (
+  "text-slide": transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+// Helper function to get color
+@function color($name) {
+  @return map.get($colors, $name);
+}
+
+// Helper function to get shadow
+@function shadow($name) {
+  @return map.get($shadows, $name);
+}
+
+// Helper function to get container value
+@function container($name) {
+  @return map.get($containers, $name);
+}
+
+// Helper function to get transition
+@function transition($name) {
+  @return map.get($transitions, $name);
+}
+
+// Export CSS custom properties from Sass variables
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $shadows {
+    --shadow-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $containers {
+    --container-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $transitions {
+    --transition-#{$name}: #{$value};
+  }
+}

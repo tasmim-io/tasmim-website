@@ -1,0 +1,77 @@
+// Example usage of Sass features
+// This file demonstrates how to use the Sass variables, functions, and mixins
+
+// Example 1: Using Sass color function
+.example-button {
+  background-color: color("accent-primary");
+  color: color("text-inverse");
+  padding: space(3) space(6);
+  border-radius: radius("md");
+  box-shadow: shadow("sm");
+}
+
+// Example 2: Using typography mixin
+.example-heading {
+  @include responsive-typography("heading-section");
+}
+
+.example-body {
+  @include typography("body");
+}
+
+// Example 3: Using button mixin
+.primary-button {
+  @include button("primary");
+}
+
+.secondary-button {
+  @include button("secondary");
+}
+
+.link-button {
+  @include button("link");
+}
+
+// Example 4: Using responsive mixin
+.responsive-container {
+  padding: space(4);
+
+  @include respond-to("tablet") {
+    padding: space(6);
+  }
+
+  @include respond-to("desktop") {
+    padding: space(8);
+  }
+}
+
+// Example 5: Using card mixin
+.example-card {
+  @include card;
+  margin-bottom: space(4);
+}
+
+// Example 6: Combining multiple features
+.featured-section {
+  background-color: color("background-elevated");
+  padding: space(6) space(8);
+  border-radius: radius("lg");
+  box-shadow: shadow("md");
+
+  h2 {
+    @include responsive-typography("heading-feature");
+    color: color("text-primary");
+    margin-bottom: space(4);
+  }
+
+  p {
+    @include typography("body");
+    color: color("text-secondary");
+    margin-bottom: space(3);
+  }
+
+  .cta-button {
+    @include button("primary");
+    margin-top: space(4);
+  }
+}

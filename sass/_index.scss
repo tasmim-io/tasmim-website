@@ -1,0 +1,8 @@
+// Main Sass index file
+// Forward all partials for @use
+
+@forward "variables";
+@forward "spacing";
+@forward "radius";
+@forward "typography";
+@forward "mixins";

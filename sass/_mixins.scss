@@ -1,0 +1,107 @@
+@use "sass:map";
+@use "variables" as vars;
+@use "spacing" as sp;
+@use "radius" as rad;
+@use "typography" as type;
+
+// Common Mixins
+
+// Responsive Breakpoints
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "wide": 1440px,
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// Helper function to get breakpoint value
+@function breakpoint($name) {
+  @return map.get($breakpoints, $name);
+}
+
+// Max-width breakpoint mixin (for mobile-first, use this for "below" queries)
+@mixin respond-below($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (max-width: $value - 1px) {
+      @content;
+    }
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Button mixin
+@mixin button($variant: "primary") {
+  @include type.typography("button-md");
+  padding: sp.space(3) sp.space(6);
+  border-radius: rad.radius("md");
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @if $variant =="primary" {
+    background-color: vars.color("button-primary-bg");
+    color: vars.color("button-text");
+
+    &:hover {
+      background-color: vars.color("button-primary-bg-hover");
+    }
+  }
+
+  @else if $variant =="secondary" {
+    background-color: vars.color("button-secondary-bg");
+    color: vars.color("button-secondary-text");
+    border: 1px solid vars.color("button-secondary-border");
+
+    &:hover {
+      background-color: vars.color("button-secondary-bg-hover");
+    }
+  }
+
+  @else if $variant =="link" {
+    background: transparent;
+    color: vars.color("button-link");
+    padding: 0;
+
+    &:hover {
+      color: vars.color("button-link-hover");
+    }
+  }
+}
+
+// Card mixin
+@mixin card {
+  background-color: vars.color("background-elevated");
+  border-radius: rad.radius("md");
+  padding: sp.space(6);
+  box-shadow: vars.shadow("sm");
+}
+
+// Focus styles
+@mixin focus-ring {
+  outline: 2px solid vars.color("accent-primary");
+  outline-offset: 2px;
+}
