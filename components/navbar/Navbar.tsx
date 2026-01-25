@@ -34,7 +34,6 @@ export const Navbar = () => {
 
     // Changed from 600px to 768px as per plan
     mm.add("(min-width: 768px)", () => {
-      // Use the hero section (50vh) as the trigger element - best practice approach
       const heroSection = document.getElementById("hero");
       if (!heroSection) return;
 
@@ -42,8 +41,7 @@ export const Navbar = () => {
         .timeline({
           scrollTrigger: {
             trigger: heroSection,
-            start: "bottom top", // When hero bottom reaches viewport top
-            scrub: 1.2,
+            start: "50% top", // When hero bottom reaches viewport top
             end: "bottom top",
             toggleActions: "play none none reverse",
           },
