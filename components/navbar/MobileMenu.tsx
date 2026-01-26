@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Link from "next/link";
-import { Button } from "../button/Button";
 import { navLinks } from "./NavLinks";
 import { BOOK_A_CALL_HREF } from "../../lib/links";
 import styles from "./MobileMenu.module.scss";

@@ -1,16 +1,16 @@
-import { Hero } from "@/components/hero/Hero";
-import { Work } from "@/components/work/Work";
-import { Services } from "@/components/services/Services";
-import { ProcessSection } from "@/components/process/ProcessSection";
-import { Problem } from "@/components/problem/Problem";
+import { HeroSection } from "@/components/hero-section/HeroSection";
+import { WorkSection } from "@/components/work-section/WorkSection";
+import { ServicesSection } from "@/components/services-section/ServicesSection";
+import { ProcessSection } from "@/components/process-section/ProcessSection";
+import { ProblemSection } from "@/components/problem-section/ProblemSection";
 
 export default function Home() {
   return (
     <div className="container">
-      <Hero />
-      <Work />
-      <Problem />
-      <Services />
+      <HeroSection />
+      <WorkSection />
+      <ProblemSection />
+      <ServicesSection />
       <ProcessSection />
     </div>
   );

@@ -12,7 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 
-export const Problem = () => {
+export const ProblemSection = () => {
   const { heading, cards, cta } = problemData;
   const ProblemIcon = iconMap[cards.growthCeiling.icon];
   const SolutionIcon = iconMap[cards.scalableAgency.icon];

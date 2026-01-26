@@ -2,7 +2,7 @@ import { ProjectCard } from "./ProjectCard";
 import styles from "./Work.module.scss";
 import projectsData from "../../data/projects.json";
 
-export const Work = () => {
+export const WorkSection = () => {
   return (
     <section id="work" className={styles.work} aria-label="Recent work section">
       <h2 className={styles.heading}>Recent Work</h2>

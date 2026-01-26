@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
   TrendingUp,
 };
 
-export const Services = () => {
+export const ServicesSection = () => {
   const { mainServices, supportingServices, bundle, cta } = servicesData;
 
   return (

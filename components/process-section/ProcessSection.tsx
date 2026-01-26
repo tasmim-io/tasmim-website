@@ -115,7 +115,7 @@ export const ProcessSection = () => {
   );
 
   return (
-    <section className={styles.section} id="method" ref={sectionRef}>
+    <section className={styles.section} id="process" ref={sectionRef}>
       <div className={styles.header}>
         <h2 className={styles.heading}>{headline}</h2>
       </div>

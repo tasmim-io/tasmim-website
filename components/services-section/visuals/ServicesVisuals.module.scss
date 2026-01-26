@@ -311,6 +311,8 @@
   max-width: 420px;
   height: 300px;
   z-index: 1;
+  transform-origin: center;
+  margin: 0 auto;
 }
 
 .flowLines {
@@ -325,6 +327,14 @@
     fill: none;
     transition: stroke 0.3s ease;
   }
+}
+
+.flowLinesDesktop {
+  display: block;
+}
+
+.flowLinesMobile {
+  display: none;
 }
 
 .flowNode {
@@ -539,5 +549,76 @@
 
   .flowLabel {
     opacity: 1;
+  }
+}
+
+@include respond-below("mobile") {
+  .flowWrapper {
+    padding: space(2);
+  }
+
+  .flowLinesDesktop {
+    display: none;
+  }
+
+  .flowLinesMobile {
+    display: block;
+  }
+
+  .flowCanvas {
+    height: 300px;
+    max-width: 320px;
+  }
+
+  .flowNodeLeft {
+    left: 0;
+  }
+
+  .flowNodeTransform {
+    left: 80px;
+  }
+
+  .flowNodeLogic {
+    left: 160px;
+  }
+
+  .flowNodeSuccess,
+  .flowNodeError {
+    left: 240px;
+  }
+
+  .flowLabel {
+    font-size: 9px;
+    text-align: center;
+    width: 60px;
+    transform: translateX(-50%);
+    white-space: normal;
+  }
+
+  .flowLabelLead {
+    left: 20px; 
+    width: 40px;
+  }
+
+  .flowLabelEnrich {
+    left: 100px; 
+  }
+
+  .flowLabelQualify {
+    left: 180px;
+  }
+
+  .flowLabelSlack,
+  .flowLabelFollow {
+    left: 260px; 
+    width: 60px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 350px) {
+  .flowCanvas {
+    transform: scale(0.7);
+    // max-width: 280px;
   }
 }

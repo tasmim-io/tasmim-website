@@ -7,7 +7,7 @@ import { Users, Check, Clock } from "lucide-react";
 import styles from "./Hero.module.scss";
 import HeroDashboard from "./HeroDashboard";
 
-export const Hero = () => {
+export const HeroSection = () => {
   return (
     <section id="hero" className={styles.hero} aria-label="Hero section">
       <div className={styles.content}>

@@ -37,20 +37,20 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: space(18);
+  gap: space(16);
 
   @include respond-to("tablet") {
     padding-left: space(6);
     padding-right: space(6);
     padding-top: 76px; // Navbar height + buffer on tablet
-    gap: space(24);
+    gap: space(20);
   }
 
   @include respond-to("desktop") {
     padding-left: space(8);
     padding-right: space(8);
     padding-top: 80px; // Navbar height + buffer on desktop
-    gap: space(36);
+    gap: space(30);
   }
 
   // Mobile adjustment

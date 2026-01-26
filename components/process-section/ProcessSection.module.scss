@@ -168,6 +168,7 @@
         justify-content: flex-start;
         margin-left: space(10);
         --visual-scale: 0.92;
+        transform-origin: 0 0;
       }
 
       @include respond-below("mobile") {

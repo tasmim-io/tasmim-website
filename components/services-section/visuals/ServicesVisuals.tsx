@@ -96,11 +96,25 @@ const AutomationVisual = () => {
     <div className={styles.flowWrapper}>
       <div className={styles.flowGrid} />
       <div className={styles.flowCanvas}>
-        <svg className={styles.flowLines} viewBox="0 0 400 300" aria-hidden>
+        <svg
+          className={`${styles.flowLines} ${styles.flowLinesDesktop}`}
+          viewBox="0 0 400 300"
+          aria-hidden
+        >
           <path d="M50 150 L 130 150" />
           <path d="M170 150 L 230 150" />
           <path d="M270 150 L 330 100" />
           <path d="M270 150 L 330 200" />
+        </svg>
+        <svg
+          className={`${styles.flowLines} ${styles.flowLinesMobile}`}
+          viewBox="0 0 280 300"
+          aria-hidden
+        >
+          <path d="M20 150 L 80 150" />
+          <path d="M120 150 L 160 150" />
+          <path d="M200 150 L 240 100" />
+          <path d="M200 150 L 240 200" />
         </svg>
         <div className={`${styles.flowNode} ${styles.flowNodeLeft}`}>
           <Zap size={18} />
