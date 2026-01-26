@@ -88,11 +88,13 @@
   grid-column: 1 / 4;
   grid-row: 5 / 8;
   z-index: 2;
-  transform: scale(0.8);
+  --card-scale: 0.8;
   transform-origin: left center;
+  animation-duration: 6.6s;
+  animation-delay: -0.8s;
 
   @include respond-below("desktop") {
-    transform: scale(0.75);
+    --card-scale: 0.75;
   }
 
   @include respond-below("mobile") {
@@ -106,8 +108,10 @@
   grid-column: 8 / 13;
   grid-row: 1 / 4;
   z-index: 2;
-  transform: scale(0.8);
+  --card-scale: 0.8;
   transform-origin: right top;
+  animation-duration: 7.2s;
+  animation-delay: -2.1s;
 
   @include respond-below("desktop") {
     width: 260px !important;
@@ -129,8 +133,10 @@
   grid-column: 1 / 8;
   grid-row: 16 / 24;
   z-index: 2;
-  transform: scale(0.8);
+  --card-scale: 0.8;
   transform-origin: center bottom;
+  animation-duration: 6.9s;
+  animation-delay: -1.4s;
 
   @include respond-below("desktop") {
     width: 260px !important;

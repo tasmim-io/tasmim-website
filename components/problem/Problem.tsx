@@ -2,6 +2,8 @@ import styles from "./Problem.module.scss";
 import { AlertCircle, CheckCircle2, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/button/Button";
 import problemData from "../../data/problem.json";
+import { CardHeader } from "./CardHeader";
+import { ListItem } from "./ListItem";
 
 const iconMap: Record<string, LucideIcon> = {
   AlertCircle,
@@ -21,41 +23,35 @@ export const Problem = () => {
 
       <div className={styles.grid}>
         <div className={`${styles.card} ${styles.growthCard}`}>
-          <div className={styles.cardHeader}>
-            <h3>{cards.growthCeiling.title}</h3>
-            <p>{cards.growthCeiling.subtitle}</p>
-          </div>
+          <CardHeader
+            title={cards.growthCeiling.title}
+            subtitle={cards.growthCeiling.subtitle}
+          />
           <div className={styles.list}>
             {cards.growthCeiling.items.map((item, index) => (
-              <div key={index} className={styles.listItem}>
-                <div className={styles.iconWrapper}>
-                  {ProblemIcon && <ProblemIcon />}
-                </div>
-                <div className={styles.itemContent}>
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                </div>
-              </div>
+              <ListItem
+                key={index}
+                title={item.title}
+                description={item.description}
+                Icon={ProblemIcon}
+              />
             ))}
           </div>
         </div>
 
         <div className={`${styles.card} ${styles.scalableCard}`}>
-          <div className={styles.cardHeader}>
-            <h3>{cards.scalableAgency.title}</h3>
-            <p>{cards.scalableAgency.subtitle}</p>
-          </div>
+          <CardHeader
+            title={cards.scalableAgency.title}
+            subtitle={cards.scalableAgency.subtitle}
+          />
           <div className={styles.list}>
             {cards.scalableAgency.items.map((item, index) => (
-              <div key={index} className={styles.listItem}>
-                <div className={styles.iconWrapper}>
-                  {SolutionIcon && <SolutionIcon />}
-                </div>
-                <div className={styles.itemContent}>
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                </div>
-              </div>
+              <ListItem
+                key={index}
+                title={item.title}
+                description={item.description}
+                Icon={SolutionIcon}
+              />
             ))}
           </div>
         </div>

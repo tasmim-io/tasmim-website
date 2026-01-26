@@ -1,6 +1,19 @@
 @use "../../sass/index" as *;
 
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(var(--card-scale));
+  }
+  50% {
+    transform: translateY(-8px) scale(var(--card-scale));
+  }
+  100% {
+    transform: translateY(0) scale(var(--card-scale));
+  }
+}
+
 .card {
+  --card-scale: 1;
   background-color: color("background-darker"); // Very dark background
   border: 1px solid color("border-darker");
   border-radius: radius("md"); // 4px
@@ -10,14 +23,17 @@
   display: flex;
   flex-direction: column;
   gap: space(4);
+  transform: translateY(0) scale(var(--card-scale));
+  animation: float 6s ease-in-out infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 
   &.compact {
     flex-direction: row;
     align-items: center;
     gap: space(4);
-    width: auto; // Or fixed width? User said "create these 2 cards", images imply similar width or responsive.
-    // Let's keep width 300px for consistency or auto.
-    // Images show them as wider than tall, but maybe same width as CRM card?
     width: 300px;
     padding: space(5); // Looks slightly less padded? Or same.
   }
@@ -184,5 +200,12 @@
       font-size: 12px;
       color: color("text-secondary");
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    transform: scale(var(--card-scale));
   }
 }

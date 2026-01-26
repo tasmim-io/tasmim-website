@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./ProjectCard.module.scss";
 import { Fragment } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   imageSrc: string;
@@ -11,6 +12,8 @@ interface ProjectCardProps {
   technologies?: string[];
   year?: string;
   isReversed?: boolean;
+  url?: string;
+  blurDataURL?: string;
 }
 
 export const ProjectCard = ({
@@ -22,9 +25,11 @@ export const ProjectCard = ({
   technologies,
   year,
   isReversed = false,
+  url,
+  blurDataURL,
 }: ProjectCardProps) => {
-  return (
-    <article className={`${styles.projectCard} ${isReversed ? styles.reversed : ""}`}>
+  const content = (
+    <>
       <div className={styles.imageWrapper}>
         <Image
           src={imageSrc}
@@ -32,6 +37,8 @@ export const ProjectCard = ({
           fill
           className={styles.image}
           sizes="(max-width: 768px) 100vw, 60vw"
+          placeholder={blurDataURL ? "blur" : "empty"}
+          blurDataURL={blurDataURL}
         />
       </div>
       <div className={styles.content}>
@@ -39,6 +46,12 @@ export const ProjectCard = ({
           {label && <span className={styles.label}>{label}</span>}
           <h3 className={styles.title}>{title}</h3>
           {description && <p className={styles.description}>{description}</p>}
+          {url && (
+            <div className={styles.viewLink}>
+              <span>View Live Website</span>
+              <ArrowUpRight className={styles.arrowIcon} size={16} />
+            </div>
+          )}
         </div>
         {(technologies || year) && (
           <div className={styles.bottomBar}>
@@ -56,6 +69,25 @@ export const ProjectCard = ({
           </div>
         )}
       </div>
+    </>
+  );
+
+  if (url) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.projectCard} ${isReversed ? styles.reversed : ""} ${styles.clickable}`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <article className={`${styles.projectCard} ${isReversed ? styles.reversed : ""}`}>
+      {content}
     </article>
   );
 };

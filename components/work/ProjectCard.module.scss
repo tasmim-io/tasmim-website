@@ -5,11 +5,40 @@
   gap: space(10);
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  outline: 1px solid transparent;
+  outline-offset: 0;
+  transition: transition("text-slide"),
+    outline-color .2s cubic-bezier(0.4, 0, 0.2, 1),
+    outline-offset .5s cubic-bezier(0.4, 0, 0.2, 1);
 
   @include respond-below("tablet") {
     flex-direction: column;
     justify-content: flex-start;
     gap: space(6);
+  }
+
+  &.clickable {
+    cursor: pointer;
+
+    @include respond-to("desktop") {
+      &:hover {
+        transform: scale(0.99);
+        outline-color: color("border-darker");
+        outline-offset: space(4);
+
+        .title,
+        .viewLink {
+          color: color("text-inverse");
+        }
+
+        .viewLink {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
@@ -78,11 +107,33 @@
 .title {
   @include responsive-typography("heading-feature");
   color: color("text-inverse");
+  transition: color 0.3s ease;
 }
 
 .description {
   @include typography("body");
   color: color("text-tertiary");
+}
+
+.viewLink {
+  @include typography("label");
+  color: color("text-tertiary");
+  display: flex;
+  align-items: center;
+  gap: space(2);
+  margin-top: space(2);
+  opacity: 0.5;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.clickable:hover .arrowIcon {
+  transform: translate(2px, -2px);
 }
 
 .bottomBar {

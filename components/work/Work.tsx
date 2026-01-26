@@ -18,6 +18,8 @@ export const Work = () => {
             technologies={project.technologies}
             year={project.year}
             isReversed={project.isReversed}
+            url={project.url}
+            blurDataURL={project.blurDataURL}
           />
         ))}
       </div>

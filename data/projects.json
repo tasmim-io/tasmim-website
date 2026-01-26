@@ -6,9 +6,16 @@
     "description": "A humanitarian organization serving Luxembourg's multilingual community needed a website their non-technical team could confidently manage. We designed a custom content system for projects, research, and open calls across three languages, structured for clarity, speed, and long-term use. Fast, organized, and ready for their global work.",
     "image": "/projects/FSL.avif",
     "imageAlt": "FSLuxembourg project",
-    "technologies": ["Nextjs", "Sanity", "Next-Intl", "GSAP"],
+    "technologies": [
+      "Nextjs",
+      "Sanity",
+      "Next-Intl",
+      "GSAP"
+    ],
     "year": "2025",
-    "isReversed": false
+    "isReversed": false,
+    "url": "https://fslux.lu",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAj0lEQVR4nHXH4QqDIBSG4XM1CQkKOWiggwIdGdPd/8V0ztA0F9SPh/f7IMYvJSGLFEIVmk8g8OtK3q901PuTZUkWAufelNjMkXOOrK3sAaZpxrPpEmhjUJsX7jWo9TUYxyc24y0YlMJBPXCvQnUDhJQohMTcuv/IREqEvueY8aL+gvMddB3bMlbU37GNseYHB5Gm2WkrLIwAAAAASUVORK5CYII="
   },
   {
     "id": "stay-wild",
@@ -17,9 +24,14 @@
     "description": "A new women's travel brand needed to launch quickly and test demand. From kickoff to live bookings in six weeks. The platform stayed simple, focused, and conversion-ready. First trips sold out within 48 hours.",
     "image": "/projects/Stay Wild.avif",
     "imageAlt": "Stay Wild Travel project",
-    "technologies": ["Webflow", "Figma"],
+    "technologies": [
+      "Webflow",
+      "Figma"
+    ],
     "year": "2025",
-    "isReversed": true
+    "isReversed": true,
+    "url": "https://staywildtravel.com",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAA9klEQVR4nBXJybZDMAAAUD9WRJA5ETFTNYVovP/fvtO7vcHf3Pqpdn1pG7VXYtF0lnjgWUdgg+Lg7137wbiusLXcDVs0mSUaedqTpEVx8IzG99q16qz4UdK1wB+ZTxwOBHQoCp5B+065RpwVOzTZFFpE9mZwJKD/da98K+6aXYZajTeVryKdWTKReERh8LTCN/yu6FViW+S7zDYBPwzMJJ5+3XBf09tgp9FZZIdMdwFXBj4kmnEYPDX1FfmWyOn8UqmV8ODJxuKVRgt+BU+FvUFfnd9F5hQ8RWI52Fm80XD9tUFPmXudfovUyeQS4OTAsuig4U5e/9gdYdXJBm0eAAAAAElFTkSuQmCC"
   },
   {
     "id": "rana",
@@ -28,9 +40,14 @@
     "description": "An international artist with 200+ works spanning paintings, murals, and exhibitions needed a digital gallery that wouldn't compete with the art. We built a minimal system that loads fast, organizes decades of work, and disappears when you're looking at the pieces. The art is loud. The website is quiet.",
     "image": "/projects/Rana.avif",
     "imageAlt": "Rana Hemdan project",
-    "technologies": ["Nextjs", "Sanity"],
+    "technologies": [
+      "Nextjs",
+      "Sanity"
+    ],
     "year": "2024",
-    "isReversed": false
+    "isReversed": false,
+    "url": "https://ranahemdan.art",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAZ0lEQVR4nJWNUQ6AIAxDuRkONuD+B2KmDAENifrxAsleW+eJFRxBjJiUACcNnA0p6poYPomifkhi0lPkom42LW1/RYpZiY1FTHexkXvoVZyB7fQauAqmOMChL+Df1yBWH6Ti3YEbOAFZO7IaeeUGTgAAAABJRU5ErkJggg=="
   },
   {
     "id": "crescent",
@@ -39,8 +56,15 @@
     "description": "An insurance broker needed a bilingual corporate website that reflected a premium position and worked seamlessly in Arabic and English. Delivered in three weeks with full RTL support, high-end animation, and strong performance across markets. Mohanad is a true artist in the digital realm. With his magic touch, my website evolved into a captivating platform that tells my story effortlessly.",
     "image": "/projects/Crescent.avif",
     "imageAlt": "Crescent project",
-    "technologies": ["Nextjs", "Sanity", "Next-Intl", "GSAP"],
+    "technologies": [
+      "Nextjs",
+      "Sanity",
+      "Next-Intl",
+      "GSAP"
+    ],
     "year": "2023",
-    "isReversed": true
+    "isReversed": true,
+    "url": "https://crescent.com.eg",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABC0lEQVR4nE3P7U6CUADG8XO3ra1Wq9l0OpkskhQPonh4PR55EQlQBEUCtcy11rqqdrQPXcDv+e8BbO2CZ64hdy8LNX3AWCo3G3fn08EqUIsEA65x2WFv+/wDgg0stxydf5n0Yk/OIq1MCWgzVz3ubtitalKToMcp7oS2mPgoXxi79QR02Zs+X0Gwbg5btvbkE4Euh2qxxG+ZDeB/aj4Htricydlc36bkkLtA4isKrJsypTMizF0pDVAem/u1dSw8MBKqutQkyolakNJIK5Px+8b53PpAFRt4xDp6m1ZdaRUor7GxW1sfhfe1D4A5pF893Amdc1Ur0z/6fYgAQaxr0K8Lb3CitHqmP8fFL5kGt7B0Q2i/AAAAAElFTkSuQmCC"
   }
 ]
