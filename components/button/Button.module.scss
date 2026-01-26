@@ -71,3 +71,8 @@
   @include typography("button-md");
   padding: space(3) space(6);
 }
+
+.xl {
+  @include typography("button-lg");
+  padding: space(4) space(12);
+}

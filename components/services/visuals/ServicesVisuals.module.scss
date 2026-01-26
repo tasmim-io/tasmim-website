@@ -1,0 +1,543 @@
+@use "../../../sass/index" as *;
+
+.visualWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: space(6);
+  background-color: color("background-dark-mode");
+}
+
+.webWindow {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
+  border-radius: radius("md");
+  border: 1px solid color("border-darkest");
+  background-color: color("background-dark");
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+
+.webWindowHeader {
+  height: 32px;
+  border-bottom: 1px solid color("border-darkest");
+  display: flex;
+  align-items: center;
+  gap: space(1);
+  padding: 0 space(3);
+  background-color: color("background-darker");
+}
+
+.windowDot {
+  width: 10px;
+  height: 10px;
+  border-radius: radius("pill");
+  background-color: color("border-strong");
+}
+
+.windowDot:nth-child(1) {
+  background-color: #f87171;
+}
+
+.windowDot:nth-child(2) {
+  background-color: #fbbf24;
+}
+
+.windowDot:nth-child(3) {
+  background-color: #34d399;
+}
+
+.webWindowBody {
+  position: relative;
+  height: calc(100% - 32px);
+  padding: space(6);
+}
+
+.webWireframeLayer,
+.webHiFiLayer {
+  position: absolute;
+  inset: 0;
+  padding: space(6);
+  transition: opacity 0.6s ease;
+}
+
+.webWireframeLayer {
+  opacity: 1;
+}
+
+.webHiFiLayer {
+  opacity: 0;
+}
+
+
+.webWireframeTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: space(6);
+}
+
+.webWireframeLogo {
+  width: 80px;
+  height: 12px;
+  background-color: color("border-darker");
+  border-radius: radius("pill");
+}
+
+.webWireframeNav {
+  display: flex;
+  gap: space(2);
+
+  span {
+    width: 40px;
+    height: 8px;
+    background-color: color("border-darker");
+    border-radius: radius("pill");
+  }
+}
+
+.webWireframeHero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: space(4);
+  margin-bottom: space(6);
+}
+
+.webWireframeHeroText {
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+}
+
+.webWireframeTitle {
+  width: 75%;
+  height: 24px;
+  background-color: color("border-darker");
+  border-radius: radius("pill");
+}
+
+.webWireframeLine {
+  width: 100%;
+  height: 8px;
+  background-color: color("border-dark");
+  border-radius: radius("pill");
+}
+
+.webWireframeButton {
+  width: 96px;
+  height: 32px;
+  background-color: color("border-strong");
+  border-radius: radius("sm");
+  margin-top: space(2);
+}
+
+.webWireframeCard {
+  height: 120px;
+  border-radius: radius("sm");
+  border: 1px dashed color("border-dark");
+  background-color: color("background-darker");
+}
+
+.webWireframeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: space(2);
+
+  span {
+    height: 64px;
+    border-radius: radius("sm");
+    border: 1px solid color("border-darkest");
+    background-color: color("background-dark");
+  }
+}
+
+.webHiFiTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: space(6);
+}
+
+.webHiFiLogo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: color("text-inverse");
+}
+
+.webHiFiNav {
+  display: flex;
+  gap: space(3);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: color("text-tertiary");
+  letter-spacing: 0.2em;
+}
+
+.webHiFiNavActive {
+  color: color("accent-light");
+}
+
+.webHiFiHero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: space(4);
+  margin-bottom: space(6);
+}
+
+.webHiFiHeroText {
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+}
+
+.webHiFiHeadline {
+  font-size: 20px;
+  font-weight: 600;
+  color: color("text-inverse");
+  line-height: 1.2;
+}
+
+.webHiFiDescription {
+  font-size: 10px;
+  color: color("text-tertiary");
+  line-height: 1.5;
+}
+
+.webHiFiCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color("accent-primary");
+  color: color("text-inverse");
+  font-size: 10px;
+  font-weight: 600;
+  padding: space(2) space(3);
+  border-radius: radius("sm");
+  width: fit-content;
+  box-shadow: shadow("md");
+}
+
+.webHiFiGlobe {
+  height: 120px;
+  border-radius: radius("sm");
+  background: linear-gradient(
+    135deg,
+    rgba(150, 137, 255, 0.1),
+    rgba(81, 65, 166, 0.08)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color("accent-light");
+}
+
+.webHiFiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: space(2);
+}
+
+.webHiFiCard {
+  height: 64px;
+  border-radius: radius("sm");
+  border: 1px solid color("border-darkest");
+  background-color: color("background-dark");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: space(1);
+  box-shadow: shadow("sm");
+}
+
+.webHiFiIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: radius("pill");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.webHiFiBar {
+  width: 32px;
+  height: 4px;
+  border-radius: radius("pill");
+  background-color: color("border-darkest");
+}
+
+.webHiFiCard0 .webHiFiIcon {
+  background-color: color("accent-blue-bg-dark");
+  color: color("accent-blue");
+}
+
+.webHiFiCard1 .webHiFiIcon {
+  background-color: color("feedback-success-bg-dark");
+  color: color("feedback-success");
+}
+
+.webHiFiCard2 .webHiFiIcon {
+  background-color: color("accent-deep");
+  color: color("accent-soft");
+}
+
+.flowWrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: space(6);
+  background-color: color("background-dark-mode");
+  overflow: hidden;
+}
+
+.flowGrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(color("border-dark") 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+.flowCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 300px;
+  z-index: 1;
+}
+
+.flowLines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  path {
+    stroke: color("border-darker");
+    stroke-width: 2;
+    fill: none;
+    transition: stroke 0.3s ease;
+  }
+}
+
+.flowNode {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: radius("md");
+  border: 1px solid color("border-darkest");
+  background-color: color("background-dark");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color("text-quaternary");
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.flowNodeLeft {
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.flowNodeTransform {
+  top: 50%;
+  left: 150px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.flowNodeLogic {
+  top: 50%;
+  left: 250px;
+  transform: translateY(-50%) rotate(45deg);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.flowNodeSuccess {
+  top: 80px;
+  left: 350px;
+}
+
+.flowNodeError {
+  top: 200px;
+  left: 350px;
+}
+
+.flowNodeWire,
+.flowNodeActive {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.flowNodeWire {
+  opacity: 1;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: radius("sm");
+    border: 1px dashed color("border-strong");
+  }
+}
+
+.flowNodeActive {
+  opacity: 0;
+  background-color: color("accent-blue-bg-dark");
+  color: color("accent-blue");
+}
+
+.flowNodeLogic .flowNodeWire::before {
+  border-style: solid;
+}
+
+.flowNodeLogic .flowNodeActive {
+  background-color: color("accent-deep");
+  color: color("accent-soft");
+}
+
+.flowLabel {
+  position: absolute;
+  font-size: 10px;
+  color: color("text-tertiary");
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flowLabelLead {
+  top: 180px;
+  left: 30px;
+}
+
+.flowLabelEnrich {
+  top: 180px;
+  left: 150px;
+}
+
+.flowLabelQualify {
+  top: 180px;
+  left: 250px;
+}
+
+.flowLabelSlack {
+  top: 60px;
+  left: 350px;
+  white-space: nowrap;
+}
+
+.flowLabelFollow {
+  top: 250px;
+  left: 350px;
+  white-space: nowrap;
+}
+
+
+@include respond-to("desktop") {
+  :global([data-service-card]:hover) .webWindow {
+    transform: scale(1.02);
+    box-shadow: shadow("xl");
+  }
+
+  :global([data-service-card]:hover) .webWireframeLayer {
+    opacity: 0;
+  }
+
+  :global([data-service-card]:hover) .webHiFiLayer {
+    opacity: 1;
+  }
+
+  :global([data-service-card]:hover) .flowNodeLeft {
+    border-color: color("accent-light");
+    color: color("accent-light");
+  }
+
+  :global([data-service-card]:hover) .flowNodeTransform .flowNodeWire,
+  :global([data-service-card]:hover) .flowNodeLogic .flowNodeWire {
+    opacity: 0;
+  }
+
+  :global([data-service-card]:hover) .flowNodeTransform .flowNodeActive,
+  :global([data-service-card]:hover) .flowNodeLogic .flowNodeActive {
+    opacity: 1;
+  }
+
+  :global([data-service-card]:hover) .flowNodeLogic {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  :global([data-service-card]:hover) .flowNodeSuccess {
+    transform: translateY(-4px);
+    color: color("feedback-success");
+  }
+
+  :global([data-service-card]:hover) .flowNodeError {
+    transform: translateY(4px);
+    color: color("feedback-error");
+  }
+
+  :global([data-service-card]:hover) .flowLabel {
+    opacity: 1;
+  }
+}
+
+@include respond-below("desktop") {
+  .webWindow {
+    transform: scale(1.02);
+    box-shadow: shadow("xl");
+  }
+
+  .webWireframeLayer {
+    opacity: 0;
+  }
+
+  .webHiFiLayer {
+    opacity: 1;
+  }
+
+  .flowNodeLeft {
+    border-color: color("accent-light");
+    color: color("accent-light");
+  }
+
+  .flowNodeTransform .flowNodeWire,
+  .flowNodeLogic .flowNodeWire {
+    opacity: 0;
+  }
+
+  .flowNodeTransform .flowNodeActive,
+  .flowNodeLogic .flowNodeActive {
+    opacity: 1;
+  }
+
+  .flowNodeLogic {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  .flowNodeSuccess {
+    transform: translateY(-4px);
+    color: color("feedback-success");
+  }
+
+  .flowNodeError {
+    transform: translateY(4px);
+    color: color("feedback-error");
+  }
+
+  .flowLabel {
+    opacity: 1;
+  }
+}

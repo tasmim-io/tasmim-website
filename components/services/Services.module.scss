@@ -1,0 +1,488 @@
+@use "../../sass/index" as *;
+
+.section {
+  padding-top: space(20);
+  padding-bottom: space(20);
+  background-color: color("background-dark-mode");
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 0 space(16);
+  text-align: left;
+
+  @include respond-below("tablet") {
+    margin: 0 0 space(10);
+  }
+
+  .heading {
+    @include responsive-typography("display-lg");
+    color: color("text-inverse");
+    margin-bottom: space(6);
+  }
+}
+
+.mainGrid {
+  display: flex;
+  flex-direction: column;
+  gap: space(6);
+  margin-bottom: space(8);
+}
+
+.mainCard {
+  border-radius: radius("md");
+  border: 1px solid color("border-darkest");
+  background-color: color("background-darker");
+  padding: space(4);
+  box-shadow: shadow("xl");
+
+  @include respond-to("tablet") {
+    padding: space(10);
+  }
+
+  .mainCardGrid {
+    display: grid;
+    gap: space(10);
+
+    @include respond-to("desktop") {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+    }
+  }
+
+  .mainCardContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .iconBadge {
+    width: 56px;
+    height: 56px;
+    border-radius: radius("md");
+    background-color: color("background-dark");
+    color: color("text-inverse");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: space(6);
+  }
+
+  .serviceTitle {
+    @include responsive-typography("heading-feature");
+    color: color("text-inverse");
+    margin-bottom: space(5);
+  }
+
+  .serviceDescription {
+    @include responsive-typography("body-lead");
+    color: color("text-tertiary");
+    margin-bottom: space(8);
+  }
+
+  .problemBox {
+    border: 1px solid color("accent-deep");
+    background-color: color("accent-dark");
+    padding: space(4);
+    margin-bottom: space(8);
+    color: color("accent-soft");
+
+    @include respond-to("tablet") {
+      padding: space(6);
+    }
+
+    .problemLabel {
+      @include typography("label-eyebrow");
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 800;
+      display: block;
+      margin-bottom: space(2);
+    }
+
+    .problemText {
+      @include typography("body");
+    }
+  }
+
+  .benefits {
+    margin-bottom: space(8);
+
+    .benefitsTitle {
+      @include typography("label");
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: color("text-inverse");
+      margin-bottom: space(5);
+    }
+
+    .benefitsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: space(4);
+    }
+
+    .benefitItem {
+      display: flex;
+      gap: space(3);
+      align-items: flex-start;
+      color: color("text-inverse");
+      @include typography("body");
+    }
+
+    .benefitIcon {
+      color: color("accent-light");
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: space(4);
+
+    .optionsLabel {
+      @include typography("label");
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: color("text-inverse");
+    }
+
+    .optionsList {
+      display: flex;
+      flex-direction: column;
+      gap: space(4);
+    }
+
+    .optionRow {
+      display: flex;
+      flex-direction: column;
+      gap: space(3);
+      padding: space(4);
+      border-radius: radius("sm");
+      background-color: color("background-dark");
+      border: 1px solid color("border-darker");
+    }
+
+    .optionHeader {
+      display: flex;
+      flex-direction: column;
+      gap: space(3);
+
+      @include respond-to("tablet") {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+
+    .optionContent {
+      display: flex;
+      flex-direction: column;
+      gap: space(2);
+      flex: 1;
+    }
+
+    .optionMeta {
+      display: flex;
+      flex-direction: column;
+      gap: space(1);
+      align-items: flex-start;
+
+      @include respond-to("tablet") {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+
+    .optionTitle {
+      @include typography("body-large");
+      font-size: 18px;
+      font-weight: 700;
+      color: color("text-inverse");
+    }
+
+    .optionPrice {
+      @include typography("body");
+      color: color("text-inverse");
+      font-weight: 600;
+    }
+
+    .optionTimeline {
+      @include typography("body-small");
+      color: color("text-tertiary");
+      font-weight: 600;
+    }
+
+    .optionDetails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: space(2);
+    }
+
+    .optionDetailItem {
+      @include typography("body-small");
+      color: color("text-tertiary");
+    }
+  }
+
+  .serviceLinkWrap {
+    margin-top: space(6);
+  }
+
+  .serviceLink {
+    display: inline-flex;
+    align-items: center;
+    gap: space(2);
+    @include typography("body");
+    font-weight: 600;
+    color: color("text-inverse");
+    border-bottom: 2px solid color("text-inverse");
+    text-decoration: none;
+    padding-bottom: space(1);
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: color("accent-light");
+      border-color: color("accent-light");
+    }
+  }
+
+  .mainCardVisual {
+    border-radius: radius("md");
+    border: 1px solid color("border-darkest");
+    background-color: color("background-darker");
+    overflow: hidden;
+    min-height: 500px;
+    height: 100%;
+
+    @include respond-below("tablet") {
+      min-height: 420px;
+    }
+  }
+}
+
+.supportingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: space(6);
+  margin-bottom: space(8);
+
+  @include respond-to("tablet") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.supportingCard {
+  border-radius: radius("md");
+  border: 1px solid color("border-darkest");
+  background-color: color("background-darker");
+  padding: space(4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+
+  @include respond-to("tablet") {
+    padding: space(8);
+  }
+
+  .supportingHeader {
+    display: flex;
+    align-items: center;
+    gap: space(4);
+    margin-bottom: space(6);
+  }
+
+  .supportingIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: radius("md");
+    border: 1px solid color("border-darkest");
+    background-color: color("background-dark");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: color("text-inverse");
+  }
+
+  .supportingTitle {
+    @include responsive-typography("heading-block");
+    color: color("text-inverse");
+    font-weight: 600;
+  }
+
+  .supportingDescription {
+    @include typography("body");
+    color: color("text-tertiary");
+    margin-bottom: space(6);
+  }
+
+  .supportingDetails {
+    padding: space(5);
+    border-radius: radius("sm");
+    background-color: color("background-dark");
+    border: 1px solid color("border-darker");
+    margin-bottom: space(6);
+  }
+
+  .supportingLabel {
+    @include typography("label");
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: color("text-inverse");
+    display: block;
+    margin-bottom: space(2);
+  }
+
+  .supportingDetailList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: space(4);
+  }
+
+  .supportingDetailItem {
+    @include typography("body-small");
+    color: color("text-inverse");
+    display: flex;
+    align-items: flex-start;
+    gap: space(2);
+  }
+
+  .supportingDetailIcon {
+    color: color("accent-light");
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .supportingNote {
+    @include typography("body-small");
+    text-align: center;
+    margin-top: space(5);
+    margin-bottom: space(5);
+    color: color("accent-soft");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .supportingMeta {
+    border-top: 1px solid color("border-darkest");
+    padding-top: space(5);
+    display: flex;
+    flex-direction: column;
+    gap: space(3);
+  }
+
+  .supportingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: space(3);
+  }
+
+  .supportingMetaLabel {
+    @include typography("body-caption");
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: color("text-tertiary");
+  }
+
+  .supportingMetaValue {
+    @include typography("body-small");
+    color: color("text-inverse");
+    font-weight: 600;
+  }
+
+  .supportingLinkWrap {
+    padding-top: space(4);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .supportingLink {
+    display: inline-flex;
+    align-items: center;
+    gap: space(2);
+    @include typography("body-small");
+    color: color("text-inverse");
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: color("accent-light");
+    }
+  }
+}
+
+.bundle {
+  border-radius: radius("md");
+  border: 1px solid color("accent-deep");
+  background-color: color("accent-dark");
+  padding: space(8);
+  text-align: center;
+  margin-bottom: space(12);
+
+  .bundleTitle {
+    @include responsive-typography("heading-block");
+    color: color("accent-soft");
+    font-weight: 700;
+    margin-bottom: space(3);
+  }
+
+  .bundleText {
+    @include typography("body");
+    color: color("text-tertiary");
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .bundleLink {
+    @include typography("label");
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-weight: 600;
+    color: color("accent-soft");
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: color("text-inverse");
+    }
+  }
+}
+
+.cta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .ctaTitle {
+    @include responsive-typography("heading-block");
+    color: color("text-inverse");
+    font-weight: 600;
+    margin-bottom: space(2);
+  }
+
+  .ctaText {
+  max-width: 400px;
+    
+    @include responsive-typography("body-lead");
+    color: color("text-tertiary");
+    margin-bottom: space(5);
+  }
+}

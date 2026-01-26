@@ -1,0 +1,134 @@
+{
+  "headline": "Two foundations. Four ways to help.",
+  "subheadline": "Choose the infrastructure you need. Start with one, add the other, or build both together.",
+  "mainServices": [
+    {
+      "id": "web",
+      "title": "Web & Brand Systems",
+      "icon": "Globe",
+      "description": "Your website is how you're judged before you speak. We build digital presence that matches your expertise, from focused landing pages to comprehensive brand systems.",
+      "problemTitle": "WHAT THIS SOLVES",
+      "problemText": "First impressions that raise questions. Credibility gaps. Touchpoints that feel improvised, not intentional.",
+      "benefitsTitle": "What you get",
+      "benefits": [
+        "A polished, brand-aligned site that builds instant trust and credibility",
+        "Fast, mobile-optimized pages you're proud to share with prospects",
+        "Seamless contact forms and basic CRM integration for smoother leads",
+        "A professional foundation that positions you as the established expert",
+        "Technical documentation and 1-on-1 training"
+      ],
+      "optionsLabel": "Two ways to build",
+      "options": [
+        {
+          "title": "Essential Presence",
+          "price": "€2,500-3,500",
+          "timeline": "Est. 3-4 weeks",
+          "items": [
+            "1-2 responsive pages (Home + Contact)",
+            "Contact form with basic CRM connection",
+            "Email automation setup",
+            "Basic analytics & SEO foundation"
+          ]
+        },
+        {
+          "title": "Complete Presence",
+          "price": "€5,000-8,000",
+          "timeline": "Est. 5-8 weeks",
+          "items": [
+            "5-10 pages + Comprehensive brand system",
+            "Advanced forms with CRM connection and lead scoring",
+            "Custom CMS + Advanced analytics",
+            "Content strategy and SEO keyword research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "title": "Automation & AI Systems",
+      "icon": "Cpu",
+      "description": "Manual reporting shouldn't consume your week. Client updates shouldn't pile up. We build systems that eliminate repetitive tasks and give you real-time visibility into operations.",
+      "problemTitle": "What this solves:",
+      "problemText": "Manual data entry. Context-switching between strategy and execution. Scattered tools that don't talk to each other.",
+      "benefitsTitle": "What you get",
+      "benefits": [
+        "Automated workflows that reclaim hours from manual tasks",
+        "Real-time dashboard with clear visibility into operations",
+        "Integrated tools that finally sync and communicate seamlessly",
+        "More focus on strategy, clients, and growth, instead of admin",
+        "Technical documentation and 1-on-1 training"
+      ],
+      "optionsLabel": "Two ways to build",
+      "options": [
+        {
+          "title": "Essential Flows",
+          "price": "€1,500-3,000",
+          "timeline": "Est. 2-3 weeks",
+          "items": [
+            "1-2 automated workflows designed for your process",
+            "3-tool integration (Forms, CRM, Email)",
+            "Basic operational dashboard (leads, projects, tasks)",
+            "Auto-updating, mobile accessible"
+          ]
+        },
+        {
+          "title": "Operational Intelligence",
+          "price": "€3,500-5,000",
+          "timeline": "Est. 3-5 weeks",
+          "items": [
+            "3-5 automated workflows with conditional logic",
+            "Multi-stage client onboarding and cross-platform reporting",
+            "Light AI integration (chatbot, automated summaries)",
+            "Real-time dashboard with custom role views"
+          ]
+        }
+      ]
+    }
+  ],
+  "supportingServices": [
+    {
+      "icon": "Search",
+      "title": "Calm Clarity Audit",
+      "description": "We'll audit your website, CRM, automations, and workflows—then show you exactly what's broken, what's working, and what to fix first.",
+      "detailsLabel": "What You Get",
+      "details": [
+        "First impression analysis (what signals are you sending?)",
+        "UX friction points (where do visitors drop off?)",
+        "Technical performance (speed, mobile, SEO)",
+        "Credibility gaps analysis",
+        "Tool stack analysis & integration check"
+      ],
+      "note": "“Audit fee applied to the project total if you move forward within 60 days.”",
+      "timelineLabel": "Timeline",
+      "timeline": "1-2 weeks",
+      "investmentLabel": "Investment",
+      "investment": "€800-1,200"
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Steady Growth Plan",
+      "description": "Monthly audits, enhancement sprints, quarterly strategy sessions, and priority support keep your infrastructure growing.",
+      "detailsLabel": "What You Get",
+      "details": [
+        "System health audit & Performance monitoring",
+        "1 enhancement sprint (~8-12 hours dev work)",
+        "Priority support (24h response time)",
+        "Strategy session (60 mins)",
+        "Roadmap update"
+      ],
+      "timelineLabel": "Timeline",
+      "timeline": "Ongoing (3-month minimum)",
+      "investmentLabel": "Investment",
+      "investment": "€1,200-2,000/month"
+    }
+  ],
+  "bundle": {
+    "title": "Build together, save 15-20%",
+    "text": "When you build web and automation as one project, they're architected to work together from day one—and you save on the total investment."
+  },
+  "cta": {
+    "title": "Not sure which service fits your needs?",
+    "text": "Book a call. We'll diagnose your situation and recommend the right approach.",
+    "buttonText": "Book a  call"
+  }
+}

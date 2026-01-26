@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero/Hero";
 import { Work } from "@/components/work/Work";
+import { Services } from "@/components/services/Services";
 import { Problem } from "@/components/problem/Problem";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Work />
       <Problem />
+      <Services />
     </div>
   );
 }

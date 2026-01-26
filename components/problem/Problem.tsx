@@ -62,7 +62,7 @@ export const Problem = () => {
         <Button
           href={cta.button.href}
           variant={cta.button.variant as ButtonVariant}
-          size="lg"
+          size="xl"
         >
           {cta.button.text}
         </Button>
