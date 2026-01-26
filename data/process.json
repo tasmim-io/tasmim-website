@@ -1,0 +1,75 @@
+{
+  "headline": "Built with you, not just for you.",
+  "steps": [
+    {
+      "id": "01",
+      "title": "Discovery Call",
+      "duration": "30-45 minutes",
+      "description": "We start with diagnosis. We discuss your current situation, pain points, and timeline—then recommend the right approach and next steps.",
+      "requirement": "Honest assessment of current pain points, timeline expectations",
+      "visual": {
+        "type": "clarity",
+        "title": "Discovery Call",
+        "meta": "30-45 min • Google Meet",
+        "statusText": "Confirmed"
+      }
+    },
+    {
+      "id": "02",
+      "title": "Proposal & Planning",
+      "duration": "48 hours",
+      "description": "You receive a detailed proposal: deliverables, timeline, pricing, what we need from you. Clear scope boundaries, what's included and what's not.",
+      "requirement": "Review proposal, approve scope and initial deposit to begin",
+      "visual": {
+        "type": "proposal",
+        "fileName": "PROPOSAL_FINAL.PDF",
+        "timelineLabel": "Timeline",
+        "timelineValue": "4 Weeks",
+        "investmentLabel": "Investment",
+        "investmentValue": "€3,500",
+        "buttonText": "Accept & Sign"
+      }
+    },
+    {
+      "id": "03",
+      "title": "Build & Collaboration",
+      "duration": "2-8 weeks",
+      "description": "We build in focused phases. You review in progress, not just at the end. We adapt to feedback without scope creep. Change requests are discussed openly, not buried.",
+      "requirement": "Timely feedback and access to your current tools",
+      "visual": {
+        "type": "sprint",
+        "title": "Sprint 1 Review",
+        "statusText": "In Progress",
+        "tasks": [
+          {
+            "text": "Homepage Structure",
+            "done": true
+          },
+          {
+            "text": "Service Page CMS",
+            "done": false
+          },
+          {
+            "text": "Mobile Navigation",
+            "done": false
+          }
+        ],
+        "commentAuthor": "JD",
+        "commentText": "The new layout looks great! Just need to tweak the mobile padding."
+      }
+    },
+    {
+      "id": "04",
+      "title": "Launch & Handoff",
+      "duration": "1 week",
+      "description": "We deploy, test, and train your team. You receive complete documentation, architecture overview, and support guidelines. We ensure you're confident running the system.",
+      "requirement": "Final approval and remaining payment. We train your team before handoff.",
+      "visual": {
+        "type": "launch",
+        "title": "System Live",
+        "subtitle": "All checks passed."
+      }
+    }
+  ],
+  "philosophyStatement": "We build proportional infrastructure that works from day one and scales when you're ready."
+}
