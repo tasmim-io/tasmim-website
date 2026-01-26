@@ -1,6 +1,12 @@
+export type Pricing = {
+  egp: { min: number; max: number };
+  eur: { min: number; max: number };
+  perMonth?: boolean;
+};
+
 export type ServiceOption = {
   title: string;
-  price: string;
+  pricing: Pricing;
   timeline: string;
   items: string[];
 };
@@ -28,7 +34,7 @@ export type SupportingService = {
   timelineLabel: string;
   timeline: string;
   investmentLabel: string;
-  investment: string;
+  pricing: Pricing;
 };
 
 export type BundleData = {

@@ -1,14 +1,25 @@
-import { Check, type LucideIcon } from "lucide-react";
+"use client";
+
+import { Check, Cpu, Globe, type LucideIcon } from "lucide-react";
 import styles from "./Services.module.scss";
 import { ServicesVisuals } from "./visuals/ServicesVisuals";
 import type { MainService } from "./types";
+import { useLocation } from "@/lib/location-context";
+import { formatPrice } from "@/lib/format-price";
+
+const iconMap: Record<string, LucideIcon> = {
+  Globe,
+  Cpu,
+};
 
 type MainServiceCardProps = {
   service: MainService;
-  Icon: LucideIcon;
 };
 
-export const MainServiceCard = ({ service, Icon }: MainServiceCardProps) => {
+export const MainServiceCard = ({ service }: MainServiceCardProps) => {
+  const { currency } = useLocation();
+  const Icon = iconMap[service.icon];
+
   return (
     <div className={styles.mainCard} data-service-card>
       <div className={styles.mainCardGrid}>
@@ -50,7 +61,9 @@ export const MainServiceCard = ({ service, Icon }: MainServiceCardProps) => {
                       </ul>
                     </div>
                     <div className={styles.optionMeta}>
-                      <span className={styles.optionPrice}>{option.price}</span>
+                      <span className={styles.optionPrice}>
+                        {formatPrice(option.pricing, currency)}
+                      </span>
                       <span className={styles.optionTimeline}>
                         {option.timeline}
                       </span>

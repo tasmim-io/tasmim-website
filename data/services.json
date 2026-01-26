@@ -21,7 +21,10 @@
       "options": [
         {
           "title": "Essential Presence",
-          "price": "€2,500-3,500",
+          "pricing": {
+            "egp": { "min": 30000, "max": 60000 },
+            "eur": { "min": 2500, "max": 3500 }
+          },
           "timeline": "Est. 3-4 weeks",
           "items": [
             "1-2 responsive pages (Home + Contact)",
@@ -32,7 +35,10 @@
         },
         {
           "title": "Complete Presence",
-          "price": "€5,000-8,000",
+          "pricing": {
+            "egp": { "min": 60000, "max": 180000 },
+            "eur": { "min": 5000, "max": 8000 }
+          },
           "timeline": "Est. 5-8 weeks",
           "items": [
             "5-10 pages + Comprehensive brand system",
@@ -62,7 +68,10 @@
       "options": [
         {
           "title": "Essential Flows",
-          "price": "€1,500-3,000",
+          "pricing": {
+            "egp": { "min": 35000, "max": 75000 },
+            "eur": { "min": 2000, "max": 3000 }
+          },
           "timeline": "Est. 2-3 weeks",
           "items": [
             "1-2 automated workflows designed for your process",
@@ -73,7 +82,10 @@
         },
         {
           "title": "Operational Intelligence",
-          "price": "€3,500-5,000",
+          "pricing": {
+            "egp": { "min": 70000, "max": 120000 },
+            "eur": { "min": 3500, "max": 5000 }
+          },
           "timeline": "Est. 3-5 weeks",
           "items": [
             "3-5 automated workflows with conditional logic",
@@ -98,11 +110,14 @@
         "Credibility gaps analysis",
         "Tool stack analysis & integration check"
       ],
-      "note": "“Audit fee applied to the project total if you move forward within 60 days.”",
+      "note": "Audit fee applied to the project total if you move forward within 60 days.",
       "timelineLabel": "Timeline",
       "timeline": "1-2 weeks",
       "investmentLabel": "Investment",
-      "investment": "€800-1,200"
+      "pricing": {
+        "egp": { "min": 15000, "max": 25000 },
+        "eur": { "min": 800, "max": 1200 }
+      }
     },
     {
       "icon": "TrendingUp",
@@ -119,7 +134,11 @@
       "timelineLabel": "Timeline",
       "timeline": "Ongoing (3-month minimum)",
       "investmentLabel": "Investment",
-      "investment": "€1,200-2,000/month"
+      "pricing": {
+        "egp": { "min": 5000, "max": 25000 },
+        "eur": { "min": 1200, "max": 2000 },
+        "perMonth": true
+      }
     }
   ],
   "bundle": {

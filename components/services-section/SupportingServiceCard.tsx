@@ -1,16 +1,26 @@
-import { Check, type LucideIcon } from "lucide-react";
+"use client";
+
+import { Check, Search, TrendingUp, type LucideIcon } from "lucide-react";
 import styles from "./Services.module.scss";
 import type { SupportingService } from "./types";
+import { useLocation } from "@/lib/location-context";
+import { formatPrice } from "@/lib/format-price";
+
+const iconMap: Record<string, LucideIcon> = {
+  Search,
+  TrendingUp,
+};
 
 type SupportingServiceCardProps = {
   service: SupportingService;
-  Icon: LucideIcon;
 };
 
 export const SupportingServiceCard = ({
   service,
-  Icon,
 }: SupportingServiceCardProps) => {
+  const { currency } = useLocation();
+  const Icon = iconMap[service.icon];
+
   return (
     <div className={styles.supportingCard}>
       <div>
@@ -48,7 +58,7 @@ export const SupportingServiceCard = ({
             {service.investmentLabel}
           </span>
           <span className={styles.supportingMetaValue}>
-            {service.investment}
+            {formatPrice(service.pricing, currency)}
           </span>
         </div>
       </div>

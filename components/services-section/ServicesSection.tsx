@@ -1,17 +1,9 @@
-import { Cpu, Globe, Search, TrendingUp, type LucideIcon } from "lucide-react";
 import styles from "./Services.module.scss";
 import servicesData from "../../data/services.json";
 import { MainServiceCard } from "./MainServiceCard";
 import { SupportingServiceCard } from "./SupportingServiceCard";
 import { ServicesBundle } from "./ServicesBundle";
 import { ServicesCta } from "./ServicesCta";
-
-const iconMap: Record<string, LucideIcon> = {
-  Globe,
-  Cpu,
-  Search,
-  TrendingUp,
-};
 
 export const ServicesSection = () => {
   const { mainServices, supportingServices, bundle, cta } = servicesData;
@@ -28,21 +20,13 @@ export const ServicesSection = () => {
 
       <div className={styles.mainGrid}>
         {mainServices.map((service) => (
-          <MainServiceCard
-            key={service.id}
-            service={service}
-            Icon={iconMap[service.icon]}
-          />
+          <MainServiceCard key={service.id} service={service} />
         ))}
       </div>
 
       <div className={styles.supportingGrid}>
         {supportingServices.map((service) => (
-          <SupportingServiceCard
-            key={service.title}
-            service={service}
-            Icon={iconMap[service.icon]}
-          />
+          <SupportingServiceCard key={service.title} service={service} />
         ))}
       </div>
 

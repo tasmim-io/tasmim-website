@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import { Navbar } from "../components/navbar/Navbar";
+import { LocationProvider } from "@/lib/location-context";
 import "./globals.scss";
 
 const interTight = Inter_Tight({
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={interTight.variable}>
-        <Navbar />
-        {children}
+        <LocationProvider>
+          <Navbar />
+          {children}
+        </LocationProvider>
       </body>
     </html>
   );
