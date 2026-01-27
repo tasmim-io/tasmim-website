@@ -10,8 +10,10 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
+const siteUrl = process.env.SITE_URL || "https://tasmimstudio.netlify.app/";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tasmim.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Tasmim - Premium Websites & Intelligent Automations",
     template: "%s | Tasmim",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tasmim.com",
+    url: siteUrl,
     siteName: "Tasmim",
     title: "Tasmim - Premium Websites & Intelligent Automations",
     description:
