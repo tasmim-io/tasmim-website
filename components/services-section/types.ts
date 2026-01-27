@@ -25,6 +25,7 @@ export type MainService = {
 };
 
 export type SupportingService = {
+  id: string;
   icon: string;
   title: string;
   description: string;

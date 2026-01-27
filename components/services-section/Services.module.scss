@@ -164,9 +164,7 @@
       flex-direction: column;
       gap: space(3);
       padding: space(4);
-      border-radius: radius("sm");
-      background-color: color("background-dark");
-      border: 1px solid color("border-darker");
+      @extend %tierPanel;
     }
 
     .optionHeader {
@@ -272,6 +270,12 @@
   }
 }
 
+%tierPanel {
+  border-radius: radius("sm");
+  background-color: color("background-dark");
+  border: 1px solid color("border-darker");
+}
+
 .supportingGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -329,11 +333,9 @@
   }
 
   .supportingDetails {
-    padding: space(5);
-    border-radius: radius("sm");
-    background-color: color("background-dark");
-    border: 1px solid color("border-darker");
-    margin-bottom: space(6);
+    padding: space(4);
+    @extend %tierPanel;
+    margin-bottom: space(5);
   }
 
   .supportingLabel {
@@ -352,7 +354,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: space(4);
+    gap: space(3);
   }
 
   .supportingDetailItem {

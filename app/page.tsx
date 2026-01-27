@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/services-section/ServicesSection";
 import { ProcessSection } from "@/components/process-section/ProcessSection";
 import { ProblemSection } from "@/components/problem-section/ProblemSection";
 import { FinalCtaSection } from "@/components/final-cta-section/FinalCtaSection";
+import { Footer } from "@/components/footer-section/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <FinalCtaSection />
+      <Footer />
     </div>
   );
 }

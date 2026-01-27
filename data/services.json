@@ -99,6 +99,7 @@
   ],
   "supportingServices": [
     {
+      "id": "audit",
       "icon": "Search",
       "title": "Calm Clarity Audit",
       "description": "We'll audit your website, CRM, automations, and workflows—then show you exactly what's broken, what's working, and what to fix first.",
@@ -120,6 +121,7 @@
       }
     },
     {
+      "id": "growth",
       "icon": "TrendingUp",
       "title": "Steady Growth Plan",
       "description": "Monthly audits, enhancement sprints, quarterly strategy sessions, and priority support keep your infrastructure growing.",

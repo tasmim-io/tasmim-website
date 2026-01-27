@@ -21,7 +21,7 @@ export const MainServiceCard = ({ service }: MainServiceCardProps) => {
   const Icon = iconMap[service.icon];
 
   return (
-    <div className={styles.mainCard} data-service-card>
+    <div id={`service-${service.id}`} className={styles.mainCard} data-service-card>
       <div className={styles.mainCardGrid}>
         <div className={styles.mainCardContent}>
           <div className={styles.iconBadge}>

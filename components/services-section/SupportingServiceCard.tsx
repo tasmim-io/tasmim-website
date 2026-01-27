@@ -20,7 +20,7 @@ export const SupportingServiceCard = ({ service }: SupportingServiceCardProps) =
   const Icon = iconMap[service.icon];
 
   return (
-    <div className={styles.supportingCard}>
+    <div id={`service-${service.id}`} className={styles.supportingCard}>
       <div>
         <div className={styles.supportingHeader}>
           <div className={styles.supportingIcon}>

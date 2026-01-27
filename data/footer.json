@@ -1,0 +1,38 @@
+{
+  "brand": {
+    "logoText": "TASMIM",
+    "tagline": "For agencies and experts who value calm operations as much as strong first impressions.",
+    "copyright": "© 2024 TASMIM. All rights reserved."
+  },
+  "services": {
+    "title": "Services",
+    "links": [
+      { "label": "Web & Brand Systems", "href": "#service-web" },
+      { "label": "Automation & AI Systems", "href": "#service-automation" },
+      { "label": "Calm Clarity Audit", "href": "#service-audit" },
+      { "label": "Steady Growth Plan", "href": "#service-growth" },
+      { "label": "Book a Call", "href": "https://cal.eu/tasmim/30min" }
+    ]
+  },
+  "navigation": {
+    "title": "Navigation",
+    "links": [
+      { "label": "Home", "href": "#hero" },
+      { "label": "Work", "href": "#work" },
+      { "label": "Services", "href": "#services" },
+      { "label": "Process", "href": "#process" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "emailLabel": "Email",
+    "email": "contact@tasmim.io",
+    "servingLabel": "Serving",
+    "serving": "International Clients",
+    "social": [
+      { "key": "linkedin", "label": "LinkedIn", "icon": "Linkedin" },
+      { "key": "twitter", "label": "Twitter", "icon": "Twitter" },
+      { "key": "instagram", "label": "Instagram", "icon": "Instagram" }
+    ]
+  }
+}

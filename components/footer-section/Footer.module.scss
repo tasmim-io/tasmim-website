@@ -1,0 +1,163 @@
+@use "../../sass/index" as *;
+
+.footer {
+  padding: space(20) 0 space(20);
+  background-color: color("background-dark-mode");
+  border-top: 1px solid color("border-darker");
+
+  @include respond-below("tablet") {
+    padding: space(16) 0 space(10);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: space(10);
+  align-items: stretch;
+
+  @include respond-below("tablet") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: space(8);
+  }
+
+  @include respond-below("mobile") {
+    grid-template-columns: 1fr;
+    gap: space(6);
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: space(4);
+
+  @include respond-to("tablet") {
+    height: 100%;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: space(2);
+}
+
+.logoImage {
+  display: block;
+}
+
+.logoText {
+  @include typography("logo-text");
+  color: color("text-inverse");
+}
+
+.tagline {
+  @include typography("body-small");
+  font-size: 14px;
+  color: color("text-tertiary");
+  max-width: 260px;
+}
+
+.copyright {
+  @include typography("body-small");
+  color: color("text-quaternary");
+  margin-top: 0;
+
+  @include respond-to("tablet") {
+    margin-top: auto;
+    padding-top: space(6);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: space(4);
+
+  @include respond-to("tablet") {
+    height: 100%;
+  }
+}
+
+.columnTitle {
+  @include typography("label-eyebrow");
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  color: color("text-inverse");
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: space(3);
+}
+
+.link {
+  @include typography("body-small");
+  color: color("text-tertiary");
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: color("text-inverse");
+  }
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+}
+
+.label {
+  @include typography("label-eyebrow");
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  color: color("text-inverse");
+}
+
+.contactValue {
+  @include typography("body-small");
+  color: color("text-tertiary");
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: space(2);
+  margin-top: 0;
+
+  @include respond-to("tablet") {
+    margin-top: auto;
+    padding-top: space(6);
+  }
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: color("text-tertiary");
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    color: color("text-inverse");
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: none;
+}
