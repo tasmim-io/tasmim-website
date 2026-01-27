@@ -28,8 +28,8 @@ export const ProcessSection = () => {
         const timeline = timelineRef.current;
         const lineTrack = lineTrackRef.current;
         const lineFill = lineFillRef.current;
-        const markers = markersRef.current.filter(
-          (marker): marker is HTMLDivElement => Boolean(marker)
+        const markers = markersRef.current.filter((marker): marker is HTMLDivElement =>
+          Boolean(marker),
         );
 
         if (!section || !timeline || !lineTrack || !lineFill || !markers.length) {
@@ -111,7 +111,7 @@ export const ProcessSection = () => {
         }
       };
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (

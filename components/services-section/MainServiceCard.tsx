@@ -64,9 +64,7 @@ export const MainServiceCard = ({ service }: MainServiceCardProps) => {
                       <span className={styles.optionPrice}>
                         {formatPrice(option.pricing, currency)}
                       </span>
-                      <span className={styles.optionTimeline}>
-                        {option.timeline}
-                      </span>
+                      <span className={styles.optionTimeline}>{option.timeline}</span>
                     </div>
                   </div>
                 </div>
@@ -75,9 +73,7 @@ export const MainServiceCard = ({ service }: MainServiceCardProps) => {
           </div>
         </div>
         <div className={styles.mainCardVisual}>
-          <ServicesVisuals
-            variant={service.id === "web" ? "web" : "automation"}
-          />
+          <ServicesVisuals variant={service.id === "web" ? "web" : "automation"} />
         </div>
       </div>
     </div>

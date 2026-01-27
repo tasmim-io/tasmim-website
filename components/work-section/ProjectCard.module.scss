@@ -10,9 +10,10 @@
   padding: 0;
   outline: 1px solid transparent;
   outline-offset: 0;
-  transition: transition("text-slide"),
-    outline-color .2s cubic-bezier(0.4, 0, 0.2, 1),
-    outline-offset .5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transition("text-slide"),
+    outline-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    outline-offset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   @include respond-below("tablet") {
     flex-direction: column;
@@ -123,7 +124,9 @@
   gap: space(2);
   margin-top: space(2);
   opacity: 0.5;
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .arrowIcon {

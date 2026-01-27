@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 type Currency = "EGP" | "EUR";
 
@@ -41,10 +35,10 @@ export const LocationProvider = ({ children }: { children: ReactNode }) => {
       try {
         const response = await fetch("http://ip-api.com/json/?fields=countryCode");
         if (!response.ok) throw new Error("Failed to fetch location");
-        
+
         const data = await response.json();
         const countryCode = data.countryCode || "EG";
-        
+
         // Cache the result
         localStorage.setItem(STORAGE_KEY, countryCode);
         setIsEgyptian(countryCode === "EG");

@@ -248,7 +248,9 @@
     border-bottom: 2px solid color("text-inverse");
     text-decoration: none;
     padding-bottom: space(1);
-    transition: color 0.2s ease, border-color 0.2s ease;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
 
     &:hover {
       color: color("accent-light");
@@ -479,8 +481,8 @@
   }
 
   .ctaText {
-  max-width: 400px;
-    
+    max-width: 400px;
+
     @include responsive-typography("body-lead");
     color: color("text-tertiary");
     margin-bottom: space(5);

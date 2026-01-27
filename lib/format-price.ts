@@ -20,6 +20,6 @@ const formatNumber = (num: number): string => {
 export const formatPrice = (pricing: Pricing, currency: Currency): string => {
   const { min, max } = currency === "EGP" ? pricing.egp : pricing.eur;
   const suffix = pricing.perMonth ? ` / month` : "";
-  
+
   return `${formatNumber(min)} - ${formatNumber(max)} ${currency}${suffix}`;
 };

@@ -1,10 +1,4 @@
-import {
-  Check,
-  FileText,
-  Layout,
-  Rocket,
-  User,
-} from "lucide-react";
+import { Check, FileText, Layout, Rocket, User } from "lucide-react";
 import styles from "./ProcessVisuals.module.scss";
 import type {
   ClarityVisual,
@@ -74,13 +68,9 @@ const VisualSprint = ({ visual }: { visual: SprintVisual }) => (
       {visual.tasks.map((task) => (
         <div
           key={task.text}
-          className={`${styles.visualSprintTask} ${
-            task.done ? styles.visualSprintTaskDone : ""
-          }`}
+          className={`${styles.visualSprintTask} ${task.done ? styles.visualSprintTaskDone : ""}`}
         >
-          <span className={styles.visualSprintCheckbox}>
-            {task.done && <Check size={10} />}
-          </span>
+          <span className={styles.visualSprintCheckbox}>{task.done && <Check size={10} />}</span>
           <span>{task.text}</span>
         </div>
       ))}

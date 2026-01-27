@@ -9,16 +9,8 @@ type ProcessStepProps = {
   setMarkerRef: (element: HTMLDivElement | null) => void;
 };
 
-export const ProcessStep = ({
-  step,
-  isActive,
-  setStepRef,
-  setMarkerRef,
-}: ProcessStepProps) => (
-  <div
-    ref={setStepRef}
-    className={`${styles.step} ${isActive ? styles.stepActive : ""}`}
-  >
+export const ProcessStep = ({ step, isActive, setStepRef, setMarkerRef }: ProcessStepProps) => (
+  <div ref={setStepRef} className={`${styles.step} ${isActive ? styles.stepActive : ""}`}>
     <div className={styles.stepContent}>
       <div className={styles.stepMarker} ref={setMarkerRef} />
       <span className={styles.timePill}>{step.duration}</span>

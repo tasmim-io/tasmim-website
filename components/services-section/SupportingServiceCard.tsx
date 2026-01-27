@@ -15,9 +15,7 @@ type SupportingServiceCardProps = {
   service: SupportingService;
 };
 
-export const SupportingServiceCard = ({
-  service,
-}: SupportingServiceCardProps) => {
+export const SupportingServiceCard = ({ service }: SupportingServiceCardProps) => {
   const { currency } = useLocation();
   const Icon = iconMap[service.icon];
 
@@ -42,21 +40,15 @@ export const SupportingServiceCard = ({
             ))}
           </ul>
         </div>
-        {service.note ? (
-          <p className={styles.supportingNote}>{service.note}</p>
-        ) : null}
+        {service.note ? <p className={styles.supportingNote}>{service.note}</p> : null}
       </div>
       <div className={styles.supportingMeta}>
         <div className={styles.supportingRow}>
-          <span className={styles.supportingMetaLabel}>
-            {service.timelineLabel}
-          </span>
+          <span className={styles.supportingMetaLabel}>{service.timelineLabel}</span>
           <span className={styles.supportingMetaValue}>{service.timeline}</span>
         </div>
         <div className={styles.supportingRow}>
-          <span className={styles.supportingMetaLabel}>
-            {service.investmentLabel}
-          </span>
+          <span className={styles.supportingMetaLabel}>{service.investmentLabel}</span>
           <span className={styles.supportingMetaValue}>
             {formatPrice(service.pricing, currency)}
           </span>

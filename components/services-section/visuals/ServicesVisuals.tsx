@@ -1,13 +1,4 @@
-import {
-  ArrowRight,
-  Check,
-  Code,
-  GitBranch,
-  Globe,
-  Mail,
-  MessageSquare,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Check, Code, GitBranch, Globe, Mail, MessageSquare, Zap } from "lucide-react";
 import styles from "./ServicesVisuals.module.scss";
 
 type ServicesVisualsProps = {
@@ -137,21 +128,11 @@ const AutomationVisual = () => {
         <div className={`${styles.flowNode} ${styles.flowNodeError}`}>
           <Mail size={18} />
         </div>
-        <span className={`${styles.flowLabel} ${styles.flowLabelLead}`}>
-          New Lead
-        </span>
-        <span className={`${styles.flowLabel} ${styles.flowLabelEnrich}`}>
-          CRM Enrich
-        </span>
-        <span className={`${styles.flowLabel} ${styles.flowLabelQualify}`}>
-          Qualify
-        </span>
-        <span className={`${styles.flowLabel} ${styles.flowLabelSlack}`}>
-          Slack Alert
-        </span>
-        <span className={`${styles.flowLabel} ${styles.flowLabelFollow}`}>
-          Follow Up
-        </span>
+        <span className={`${styles.flowLabel} ${styles.flowLabelLead}`}>New Lead</span>
+        <span className={`${styles.flowLabel} ${styles.flowLabelEnrich}`}>CRM Enrich</span>
+        <span className={`${styles.flowLabel} ${styles.flowLabelQualify}`}>Qualify</span>
+        <span className={`${styles.flowLabel} ${styles.flowLabelSlack}`}>Slack Alert</span>
+        <span className={`${styles.flowLabel} ${styles.flowLabelFollow}`}>Follow Up</span>
       </div>
     </div>
   );

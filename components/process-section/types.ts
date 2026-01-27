@@ -35,11 +35,7 @@ export type LaunchVisual = {
   subtitle: string;
 };
 
-export type StepVisual =
-  | ClarityVisual
-  | ProposalVisual
-  | SprintVisual
-  | LaunchVisual;
+export type StepVisual = ClarityVisual | ProposalVisual | SprintVisual | LaunchVisual;
 
 export type ProcessStep = {
   id: string;

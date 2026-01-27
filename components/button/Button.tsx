@@ -22,8 +22,7 @@ export const Button = ({
   className = "",
 }: ButtonProps) => {
   const text = typeof children === "string" ? children : "";
-  const sizeClass =
-    size === "xl" ? styles.xl : size === "lg" ? styles.lg : "";
+  const sizeClass = size === "xl" ? styles.xl : size === "lg" ? styles.lg : "";
 
   return (
     <Link

@@ -17,10 +17,11 @@
   border: 1px solid color("border-darkest");
   background-color: color("background-dark");
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   position: relative;
 }
-
 
 .webWindowHeader {
   height: 32px;
@@ -72,7 +73,6 @@
 .webHiFiLayer {
   opacity: 0;
 }
-
 
 .webWireframeTop {
   display: flex;
@@ -225,11 +225,7 @@
 .webHiFiGlobe {
   height: 120px;
   border-radius: radius("sm");
-  background: linear-gradient(
-    135deg,
-    rgba(150, 137, 255, 0.1),
-    rgba(81, 65, 166, 0.08)
-  );
+  background: linear-gradient(135deg, rgba(150, 137, 255, 0.1), rgba(81, 65, 166, 0.08));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,7 +344,9 @@
   align-items: center;
   justify-content: center;
   color: color("text-quaternary");
-  transition: transform 0.3s ease, border-color 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
     color 0.3s ease;
 }
 
@@ -454,7 +452,6 @@
   left: 350px;
   white-space: nowrap;
 }
-
 
 @include respond-to("desktop") {
   :global([data-service-card]:hover) .webWindow {
@@ -596,12 +593,12 @@
   }
 
   .flowLabelLead {
-    left: 20px; 
+    left: 20px;
     width: 40px;
   }
 
   .flowLabelEnrich {
-    left: 100px; 
+    left: 100px;
   }
 
   .flowLabelQualify {
@@ -610,7 +607,7 @@
 
   .flowLabelSlack,
   .flowLabelFollow {
-    left: 260px; 
+    left: 260px;
     width: 60px;
     white-space: normal;
   }

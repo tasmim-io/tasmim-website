@@ -23,10 +23,7 @@ export const ProblemSection = () => {
 
       <div className={styles.grid}>
         <div className={`${styles.card} ${styles.growthCard}`}>
-          <CardHeader
-            title={cards.growthCeiling.title}
-            subtitle={cards.growthCeiling.subtitle}
-          />
+          <CardHeader title={cards.growthCeiling.title} subtitle={cards.growthCeiling.subtitle} />
           <div className={styles.list}>
             {cards.growthCeiling.items.map((item, index) => (
               <ListItem
@@ -40,10 +37,7 @@ export const ProblemSection = () => {
         </div>
 
         <div className={`${styles.card} ${styles.scalableCard}`}>
-          <CardHeader
-            title={cards.scalableAgency.title}
-            subtitle={cards.scalableAgency.subtitle}
-          />
+          <CardHeader title={cards.scalableAgency.title} subtitle={cards.scalableAgency.subtitle} />
           <div className={styles.list}>
             {cards.scalableAgency.items.map((item, index) => (
               <ListItem
@@ -59,11 +53,7 @@ export const ProblemSection = () => {
 
       <div className={styles.ctaContainer}>
         <p>{cta.text}</p>
-        <Button
-          href={cta.button.href}
-          variant={cta.button.variant as ButtonVariant}
-          size="xl"
-        >
+        <Button href={cta.button.href} variant={cta.button.variant as ButtonVariant} size="xl">
           {cta.button.text}
         </Button>
       </div>
