@@ -4,6 +4,8 @@ import { Navbar } from "../components/navbar/Navbar";
 import { CookieConsentProvider } from "@/lib/cookie-consent-context";
 import { LocationProvider } from "@/lib/location-context";
 import { CookieConsentBanner } from "@/components/cookie-consent/CookieConsentBanner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.scss";
 
 const interTight = Inter_Tight({
@@ -12,7 +14,7 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
-const siteUrl = process.env.SITE_URL || "https://tasmimstudio.netlify.app/";
+const siteUrl = process.env.SITE_URL || "https://tasmimstudio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,7 +79,11 @@ export default function RootLayout({
         <CookieConsentProvider>
           <LocationProvider>
             <Navbar />
-            <main id="main-content">{children}</main>
+            <main id="main-content">
+              {children}
+              <Analytics />
+              <SpeedInsights />
+            </main>
             <CookieConsentBanner />
           </LocationProvider>
         </CookieConsentProvider>
