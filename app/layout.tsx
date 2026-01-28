@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import { Navbar } from "../components/navbar/Navbar";
+import { CookieConsentProvider } from "@/lib/cookie-consent-context";
 import { LocationProvider } from "@/lib/location-context";
+import { CookieConsentBanner } from "@/components/cookie-consent/CookieConsentBanner";
 import "./globals.scss";
 
 const interTight = Inter_Tight({
@@ -72,10 +74,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={interTight.variable}>
-        <LocationProvider>
-          <Navbar />
-          {children}
-        </LocationProvider>
+        <CookieConsentProvider>
+          <LocationProvider>
+            <Navbar />
+            <main id="main-content">{children}</main>
+            <CookieConsentBanner />
+          </LocationProvider>
+        </CookieConsentProvider>
       </body>
     </html>
   );

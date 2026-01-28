@@ -33,11 +33,11 @@ export const LocationProvider = ({ children }: { children: ReactNode }) => {
       }
 
       try {
-        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
+        const response = await fetch("https://ipapi.co/json/");
         if (!response.ok) throw new Error("Failed to fetch location");
 
         const data = await response.json();
-        const countryCode = data.countryCode || "EG";
+        const countryCode = data.country_code || "EG";
 
         // Cache the result
         localStorage.setItem(STORAGE_KEY, countryCode);

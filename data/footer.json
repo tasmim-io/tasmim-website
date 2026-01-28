@@ -20,7 +20,8 @@
       { "label": "Home", "href": "#hero" },
       { "label": "Work", "href": "#work" },
       { "label": "Services", "href": "#services" },
-      { "label": "Process", "href": "#process" }
+      { "label": "Process", "href": "#process" },
+      { "label": "Privacy Policy", "href": "/privacy" }
     ]
   },
   "contact": {

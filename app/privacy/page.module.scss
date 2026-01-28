@@ -1,0 +1,55 @@
+@use "../../sass/index" as *;
+
+.page {
+  padding-top: space(20);
+  padding-bottom: space(20);
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.heading {
+  @include responsive-typography("heading-section");
+  color: color("text-inverse");
+  margin-bottom: space(10);
+}
+
+.lead {
+  @include typography("body-lead");
+  color: color("text-tertiary");
+  margin-bottom: space(8);
+}
+
+.richText {
+  @include typography("body");
+  color: color("text-secondary");
+
+  h2 {
+    @include responsive-typography("heading-block");
+    color: color("text-inverse");
+    margin-top: space(8);
+    margin-bottom: space(3);
+  }
+
+  p {
+    margin-bottom: space(4);
+  }
+
+  ul {
+    padding-left: space(4);
+    margin-bottom: space(4);
+  }
+
+  li {
+    margin-bottom: space(2);
+  }
+
+  a {
+    color: color("accent-soft");
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: color("accent-light");
+    }
+  }
+}

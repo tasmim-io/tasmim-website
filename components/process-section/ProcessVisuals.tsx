@@ -9,7 +9,7 @@ import type {
 } from "./types";
 
 const VisualClarity = ({ visual }: { visual: ClarityVisual }) => (
-  <div className={`process-visual ${styles.visualCard} ${styles.visualClarity}`}>
+  <div className={`process-visual ${styles.visualCard} ${styles.visualClarity}`} aria-hidden="true">
     <div className={styles.visualHeaderRow}>
       <div className={styles.visualAvatar}>
         <User size={24} />
@@ -34,7 +34,7 @@ const VisualClarity = ({ visual }: { visual: ClarityVisual }) => (
 );
 
 const VisualProposal = ({ visual }: { visual: ProposalVisual }) => (
-  <div className={`process-visual ${styles.visualCard} ${styles.visualProposal}`}>
+  <div className={`process-visual ${styles.visualCard} ${styles.visualProposal}`} aria-hidden="true">
     <div className={styles.visualProposalHeader}>
       <span>{visual.fileName}</span>
       <FileText size={16} />
@@ -54,7 +54,7 @@ const VisualProposal = ({ visual }: { visual: ProposalVisual }) => (
 );
 
 const VisualSprint = ({ visual }: { visual: SprintVisual }) => (
-  <div className={`process-visual ${styles.visualCard} ${styles.visualSprint}`}>
+  <div className={`process-visual ${styles.visualCard} ${styles.visualSprint}`} aria-hidden="true">
     <div className={styles.visualSprintHeader}>
       <div className={styles.visualSprintTitle}>
         <span className={styles.visualSprintIcon}>
@@ -83,7 +83,7 @@ const VisualSprint = ({ visual }: { visual: SprintVisual }) => (
 );
 
 const VisualLaunch = ({ visual }: { visual: LaunchVisual }) => (
-  <div className={`process-visual ${styles.visualCard} ${styles.visualLaunch}`}>
+  <div className={`process-visual ${styles.visualCard} ${styles.visualLaunch}`} aria-hidden="true">
     <div className={styles.visualLaunchPanel}>
       <div className={styles.visualLaunchIcon}>
         <Rocket size={32} />

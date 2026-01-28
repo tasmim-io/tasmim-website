@@ -61,10 +61,7 @@
     gap: space(8);
     align-items: center;
     min-height: 300px;
-    opacity: 0.4;
-    transition:
-      opacity 0.5s ease,
-      transform 0.6s ease;
+    transition: transform 0.6s ease;
 
     @include respond-to("tablet") {
       gap: space(16);
@@ -72,16 +69,23 @@
     }
 
     &.stepActive {
-      opacity: 1;
-
       .stepMarker {
         background-color: color("accent-soft");
         border-color: color("accent-deep");
       }
 
       .stepVisual {
-        opacity: 1;
         transform: translateY(0) scale(var(--visual-scale));
+      }
+
+      .stepTitle,
+      .stepDescription,
+      .timePill {
+        color: color("text-inverse");
+      }
+
+      .stepDescription {
+        color: color("text-tertiary");
       }
 
       :global(.process-visual) {
@@ -161,12 +165,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition:
-        opacity 0.6s ease,
-        transform 0.8s ease;
+      transition: transform 0.8s ease;
       --visual-scale: 1;
-      transform: translateY(48px) scale(var(--visual-scale));
-      opacity: 0.4;
+      transform: translateY(48px) scale(calc(var(--visual-scale) * 0.95));
 
       @include respond-below("tablet") {
         justify-content: flex-start;

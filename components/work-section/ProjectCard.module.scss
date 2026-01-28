@@ -34,10 +34,6 @@
         .viewLink {
           color: color("text-inverse");
         }
-
-        .viewLink {
-          opacity: 1;
-        }
       }
     }
   }
@@ -123,10 +119,7 @@
   align-items: center;
   gap: space(2);
   margin-top: space(2);
-  opacity: 0.5;
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .arrowIcon {
