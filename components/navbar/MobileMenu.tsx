@@ -34,7 +34,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           </Link>
         ))}
         <div className={styles.mobileCta}>
-          <Link href={BOOK_A_CALL_HREF} onClick={onClose} target="_blank">
+          <Link href={BOOK_A_CALL_HREF} target="_blank">
             <span>Book a call</span>
           </Link>
         </div>

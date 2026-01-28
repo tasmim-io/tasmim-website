@@ -4,6 +4,7 @@ import { Button } from "@/components/button/Button";
 import problemData from "../../data/problem.json";
 import { CardHeader } from "./CardHeader";
 import { ListItem } from "./ListItem";
+import { BOOK_A_CALL_HREF } from "../../lib/links";
 
 const iconMap: Record<string, LucideIcon> = {
   AlertCircle,
@@ -53,7 +54,7 @@ export const ProblemSection = () => {
 
       <div className={styles.ctaContainer}>
         <p>{cta.text}</p>
-        <Button href={cta.button.href} variant={cta.button.variant as ButtonVariant} size="xl">
+        <Button href={BOOK_A_CALL_HREF} variant={cta.button.variant as ButtonVariant} size="xl">
           {cta.button.text}
         </Button>
       </div>
