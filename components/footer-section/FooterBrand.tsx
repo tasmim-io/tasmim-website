@@ -26,7 +26,9 @@ export const FooterBrand = ({ brand }: FooterBrandProps) => {
         <span className={styles.logoText}>{brand.logoText}</span>
       </Link>
       <p className={styles.tagline}>{brand.tagline}</p>
-      <p className={styles.copyright}>{brand.copyright}</p>
+      <p className={styles.copyright}>
+        © {new Date().getFullYear()} {brand.copyright}
+      </p>
     </div>
   );
 };
