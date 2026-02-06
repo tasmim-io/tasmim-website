@@ -137,7 +137,7 @@
       "timeline": "Ongoing (3-month minimum)",
       "investmentLabel": "Investment",
       "pricing": {
-        "egp": { "min": 5000, "max": 25000 },
+        "egp": { "min": 10000, "max": 25000 },
         "eur": { "min": 1200, "max": 2000 },
         "perMonth": true
       }
