@@ -22,7 +22,7 @@
         {
           "title": "Essential Presence",
           "pricing": {
-            "egp": { "min": 30000, "max": 60000 },
+            "egp": { "min": 40000, "max": 70000 },
             "eur": { "min": 2500, "max": 3500 }
           },
           "timeline": "Est. 3-4 weeks",
@@ -36,7 +36,7 @@
         {
           "title": "Complete Presence",
           "pricing": {
-            "egp": { "min": 60000, "max": 180000 },
+            "egp": { "min": 80000, "max": 200000 },
             "eur": { "min": 5000, "max": 8000 }
           },
           "timeline": "Est. 5-8 weeks",
@@ -69,8 +69,8 @@
         {
           "title": "Essential Flows",
           "pricing": {
-            "egp": { "min": 35000, "max": 75000 },
-            "eur": { "min": 2000, "max": 3000 }
+            "egp": { "min": 50000, "max": 80000 },
+            "eur": { "min": 2000, "max": 4000 }
           },
           "timeline": "Est. 2-3 weeks",
           "items": [
@@ -83,8 +83,8 @@
         {
           "title": "Operational Intelligence",
           "pricing": {
-            "egp": { "min": 70000, "max": 120000 },
-            "eur": { "min": 3500, "max": 5000 }
+            "egp": { "min": 75000, "max": 150000 },
+            "eur": { "min": 4000, "max": 6000 }
           },
           "timeline": "Est. 3-5 weeks",
           "items": [
@@ -117,7 +117,7 @@
       "investmentLabel": "Investment",
       "pricing": {
         "egp": { "min": 15000, "max": 25000 },
-        "eur": { "min": 800, "max": 1200 }
+        "eur": { "min": 800, "max": 1500 }
       }
     },
     {
@@ -138,7 +138,7 @@
       "investmentLabel": "Investment",
       "pricing": {
         "egp": { "min": 10000, "max": 25000 },
-        "eur": { "min": 1200, "max": 2000 },
+        "eur": { "min": 1200, "max": 2500 },
         "perMonth": true
       }
     }
