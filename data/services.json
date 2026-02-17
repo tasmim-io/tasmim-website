@@ -25,7 +25,7 @@
             "egp": { "min": 40000, "max": 70000 },
             "eur": { "min": 2500, "max": 3500 }
           },
-          "timeline": "Est. 3-4 weeks",
+          "timeline": "Est. 2-4 weeks",
           "items": [
             "1-2 responsive pages (Home + Contact)",
             "Contact form with basic CRM connection",
@@ -39,7 +39,7 @@
             "egp": { "min": 80000, "max": 200000 },
             "eur": { "min": 5000, "max": 8000 }
           },
-          "timeline": "Est. 5-8 weeks",
+          "timeline": "Est. 4-8 weeks",
           "items": [
             "5-10 pages + Comprehensive brand system",
             "Advanced forms with CRM connection and lead scoring",
@@ -72,7 +72,7 @@
             "egp": { "min": 50000, "max": 80000 },
             "eur": { "min": 2000, "max": 4000 }
           },
-          "timeline": "Est. 2-3 weeks",
+          "timeline": "Est. 2-4 weeks",
           "items": [
             "1-2 automated workflows designed for your process",
             "3-tool integration (Forms, CRM, Email)",
@@ -86,7 +86,7 @@
             "egp": { "min": 75000, "max": 150000 },
             "eur": { "min": 4000, "max": 6000 }
           },
-          "timeline": "Est. 3-5 weeks",
+          "timeline": "Est. 3-6 weeks",
           "items": [
             "3-5 automated workflows with conditional logic",
             "Multi-stage client onboarding and cross-platform reporting",
