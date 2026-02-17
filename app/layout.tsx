@@ -4,6 +4,7 @@ import { Navbar } from "../components/navbar/Navbar";
 import { CookieConsentProvider } from "@/lib/cookie-consent-context";
 import { LocationProvider } from "@/lib/location-context";
 import { CookieConsentBanner } from "@/components/cookie-consent/CookieConsentBanner";
+import { GoogleAnalyticsWithConsent } from "@/components/analytics/GoogleAnalyticsWithConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.scss";
@@ -81,6 +82,7 @@ export default function RootLayout({
             <Navbar />
             <main id="main-content">
               {children}
+              <GoogleAnalyticsWithConsent />
               <Analytics />
               <SpeedInsights />
             </main>

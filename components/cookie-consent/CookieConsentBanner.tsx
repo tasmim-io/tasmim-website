@@ -74,8 +74,8 @@ export const CookieConsentBanner = () => {
               <div className={styles.preferenceInfo}>
                 <span className={styles.preferenceLabel}>Third-party services</span>
                 <span className={styles.preferenceDescription}>
-                  Booking calendar (Cal.com) for scheduling consultations. Enabled only with your
-                  consent.
+                  Booking calendar (Cal.com) for scheduling consultations and analytics (Google
+                  Analytics). Enabled only with your consent.
                 </span>
               </div>
               <label className={styles.toggle}>
